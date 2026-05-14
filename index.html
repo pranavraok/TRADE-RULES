@@ -11,14 +11,14 @@
         --bg: #060e1c;
         --surf: #0b1628;
         --surf2: #101f3a;
-        --border: #182d4a;
-        --accent: #00c2ff;
+        --border: #223a5d;
+        --accent: #31d3ff;
         --accent2: #0077ff;
         --gold: #f0b429;
         --green: #00e5a0;
         --red: #ff3f60;
-        --text: #dce9f8;
-        --muted: #3a5878;
+        --text: #eef5ff;
+        --muted: #8da5c5;
         --warn: #ff9500;
         --purple: #a78bfa;
       }
@@ -31,25 +31,29 @@
       body {
         background: var(--bg);
         color: var(--text);
-        font-family: "Inter", sans-serif;
+        font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
         min-height: 100vh;
         overflow-x: hidden;
         background-image:
           radial-gradient(ellipse 90% 40% at 50% -5%, #003388, transparent),
           radial-gradient(ellipse 40% 40% at 95% 60%, #00c2ff09, transparent);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
       }
 
       /* ── TICKER ── */
       .ticker {
         background: linear-gradient(90deg, #002255, #001a44, #002255);
         border-bottom: 1px solid var(--border);
-        color: var(--accent);
+        color: #79e5ff;
         padding: 7px 0;
         overflow: hidden;
         white-space: nowrap;
         font-family: "Space Mono", monospace;
-        font-size: 10px;
-        letter-spacing: 0.08em;
+        font-size: 11px;
+        letter-spacing: 0.1em;
       }
       .tick-inner {
         display: inline-block;
@@ -112,6 +116,7 @@
         font-size: 60px;
         line-height: 0.88;
         letter-spacing: 3px;
+        color: #f7fbff;
       }
       h1 span {
         color: var(--accent);
@@ -120,8 +125,8 @@
         text-align: right;
       }
       .cap .lbl {
-        font-size: 9px;
-        color: var(--muted);
+        font-size: 10px;
+        color: #b7c7df;
         letter-spacing: 0.18em;
         text-transform: uppercase;
         font-family: "Space Mono", monospace;
@@ -133,8 +138,8 @@
         line-height: 1;
       }
       .cap .sub {
-        font-size: 10px;
-        color: var(--muted);
+        font-size: 11px;
+        color: #a9bfdc;
         font-family: "Space Mono", monospace;
         margin-top: 2px;
       }
@@ -147,8 +152,8 @@
         padding: 5px 12px;
         border-radius: 2px;
         font-family: "Space Mono", monospace;
-        font-size: 9px;
-        letter-spacing: 0.1em;
+        font-size: 10px;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
       }
       .sbadge.on {
@@ -196,13 +201,13 @@
       .tab {
         padding: 12px 20px;
         font-family: "Space Mono", monospace;
-        font-size: 9px;
-        letter-spacing: 0.1em;
+        font-size: 10px;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
         cursor: pointer;
         border: none;
         background: transparent;
-        color: var(--muted);
+        color: #9eb4d0;
         transition: all 0.2s;
         border-top: 2px solid transparent;
         margin-top: -1px;
@@ -239,15 +244,15 @@
       }
       .dbanner .dt {
         font-family: "Space Mono", monospace;
-        font-size: 9px;
-        letter-spacing: 0.2em;
+        font-size: 10px;
+        letter-spacing: 0.18em;
         color: var(--red);
         margin-bottom: 6px;
       }
       .dbanner p {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.65;
-        color: #ffb0bc;
+        color: #ffd0d8;
       }
       .dbanner strong {
         color: #fff;
@@ -270,15 +275,15 @@
       }
       .scalper-bar .sb-tag {
         font-family: "Space Mono", monospace;
-        font-size: 9px;
-        letter-spacing: 0.15em;
+        font-size: 10px;
+        letter-spacing: 0.14em;
         color: var(--accent);
         text-transform: uppercase;
         margin-bottom: 3px;
       }
       .scalper-bar .sb-desc {
-        font-size: 13px;
-        color: #aac8e8;
+        font-size: 14px;
+        color: #d7e8ff;
         line-height: 1.5;
       }
       .scalper-bar a.sbtn {
@@ -287,8 +292,8 @@
         background: var(--accent);
         color: #000;
         font-family: "Space Mono", monospace;
-        font-size: 9px;
-        letter-spacing: 0.1em;
+        font-size: 10px;
+        letter-spacing: 0.12em;
         font-weight: 700;
         text-decoration: none;
         border-radius: 2px;
@@ -315,20 +320,20 @@
       }
       .sbox .sl {
         font-family: "Space Mono", monospace;
-        font-size: 8px;
-        letter-spacing: 0.15em;
-        color: var(--muted);
+        font-size: 9px;
+        letter-spacing: 0.14em;
+        color: #a9bfdc;
         text-transform: uppercase;
         margin-bottom: 6px;
       }
       .sbox .sv {
         font-family: "Bebas Neue", sans-serif;
-        font-size: 28px;
+        font-size: 30px;
         line-height: 1;
       }
       .sbox .ss {
-        font-size: 10px;
-        color: var(--muted);
+        font-size: 11px;
+        color: #96acc7;
         margin-top: 3px;
       }
       .sbox.r .sv {
@@ -350,19 +355,20 @@
       /* ── SECTION TITLE ── */
       .stitle {
         font-family: "Bebas Neue", sans-serif;
-        font-size: 32px;
+        font-size: 34px;
         letter-spacing: 2px;
         margin-bottom: 2px;
+        color: #f7fbff;
       }
       .stitle span {
         color: var(--accent);
       }
       .ssub {
-        font-size: 11px;
-        color: var(--muted);
+        font-size: 12px;
+        color: #a9bfdc;
         font-family: "Space Mono", monospace;
         margin-bottom: 22px;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.06em;
       }
 
       /* ── RULE CARDS ── */
@@ -411,14 +417,14 @@
         color: #002a18;
       }
       .rtitle {
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 600;
         margin-bottom: 6px;
-        color: var(--text);
+        color: #f7fbff;
       }
       .rdesc {
-        font-size: 12px;
-        color: var(--muted);
+        font-size: 13px;
+        color: #b5c7e0;
         line-height: 1.65;
       }
       .rtag {
@@ -426,8 +432,8 @@
         margin-top: 9px;
         padding: 2px 8px;
         font-family: "Space Mono", monospace;
-        font-size: 8px;
-        letter-spacing: 0.1em;
+        font-size: 9px;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
         border-radius: 2px;
       }
@@ -461,8 +467,8 @@
         background: var(--accent);
         color: #000;
         font-family: "Space Mono", monospace;
-        font-size: 7px;
-        letter-spacing: 0.1em;
+        font-size: 8px;
+        letter-spacing: 0.12em;
         border-radius: 2px;
         margin-left: 6px;
         font-weight: 700;
@@ -497,8 +503,8 @@
         letter-spacing: 2px;
       }
       .tcard-head .sub {
-        font-size: 11px;
-        color: rgba(255, 255, 255, 0.5);
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.72);
         font-family: "Space Mono", monospace;
         margin-top: 2px;
       }
@@ -538,8 +544,8 @@
         padding: 4px 10px;
         border-radius: 20px;
         font-family: "Space Mono", monospace;
-        font-size: 9px;
-        letter-spacing: 0.08em;
+        font-size: 10px;
+        letter-spacing: 0.1em;
         white-space: nowrap;
         flex-shrink: 0;
         margin-top: 2px;
@@ -566,13 +572,13 @@
       }
       .tslot .tinfo .ttime {
         font-family: "Space Mono", monospace;
-        font-size: 12px;
-        color: var(--text);
+        font-size: 13px;
+        color: #f7fbff;
         margin-bottom: 3px;
       }
       .tslot .tinfo .treason {
-        font-size: 11px;
-        color: var(--muted);
+        font-size: 12px;
+        color: #b5c7e0;
         line-height: 1.5;
       }
       .timing-note {
@@ -582,8 +588,8 @@
         padding: 14px 18px;
         margin-bottom: 32px;
         border-radius: 3px;
-        font-size: 12px;
-        color: #aac8e8;
+        font-size: 13px;
+        color: #d7e8ff;
         line-height: 1.7;
       }
       .timing-note strong {
@@ -596,9 +602,9 @@
       }
       .ctitle {
         font-family: "Space Mono", monospace;
-        font-size: 8px;
-        letter-spacing: 0.15em;
-        color: var(--muted);
+        font-size: 9px;
+        letter-spacing: 0.14em;
+        color: #a9bfdc;
         text-transform: uppercase;
         margin-bottom: 12px;
         padding-bottom: 6px;
@@ -640,12 +646,13 @@
         color: var(--muted);
       }
       .ctxt {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.5;
+        color: #f7fbff;
       }
       .csub {
-        font-size: 11px;
-        color: var(--muted);
+        font-size: 12px;
+        color: #a9bfdc;
         margin-top: 2px;
       }
 
@@ -666,9 +673,9 @@
       .fg label {
         display: block;
         font-family: "Space Mono", monospace;
-        font-size: 8px;
-        letter-spacing: 0.15em;
-        color: var(--muted);
+        font-size: 9px;
+        letter-spacing: 0.14em;
+        color: #a9bfdc;
         text-transform: uppercase;
         margin-bottom: 6px;
       }
@@ -677,10 +684,10 @@
         width: 100%;
         background: var(--bg);
         border: 1px solid var(--border);
-        color: var(--text);
+        color: #f7fbff;
         padding: 8px 12px;
         font-family: "Space Mono", monospace;
-        font-size: 12px;
+        font-size: 13px;
         outline: none;
         border-radius: 2px;
         transition: border-color 0.15s;
@@ -692,8 +699,8 @@
       .btn {
         padding: 10px 22px;
         font-family: "Space Mono", monospace;
-        font-size: 9px;
-        letter-spacing: 0.1em;
+        font-size: 10px;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
         border: none;
         cursor: pointer;
@@ -721,13 +728,13 @@
       .ltable {
         width: 100%;
         border-collapse: collapse;
-        font-size: 12px;
+        font-size: 13px;
       }
       .ltable th {
         font-family: "Space Mono", monospace;
-        font-size: 8px;
-        letter-spacing: 0.15em;
-        color: var(--muted);
+        font-size: 9px;
+        letter-spacing: 0.14em;
+        color: #a9bfdc;
         text-transform: uppercase;
         text-align: left;
         padding: 9px 11px;
@@ -759,13 +766,14 @@
       }
       .plbl {
         font-family: "Space Mono", monospace;
-        font-size: 9px;
-        color: var(--muted);
+        font-size: 10px;
+        color: #a9bfdc;
         letter-spacing: 0.05em;
       }
       .pval {
         font-family: "Bebas Neue", sans-serif;
-        font-size: 20px;
+        font-size: 22px;
+        color: #f7fbff;
       }
       .pbar {
         height: 5px;
@@ -804,8 +812,8 @@
         margin-bottom: 6px;
       }
       .wbox p {
-        font-size: 12px;
-        color: #a0f0c8;
+        font-size: 13px;
+        color: #d2ffe9;
         line-height: 1.65;
       }
       .wbox strong {
@@ -833,7 +841,7 @@
       .iron ul li {
         padding: 9px 0;
         border-bottom: 1px solid #2a1e00;
-        font-size: 13px;
+        font-size: 14px;
         display: flex;
         gap: 13px;
         align-items: flex-start;
@@ -865,8 +873,8 @@
         margin-bottom: 7px;
       }
       .killd {
-        font-size: 13px;
-        color: #ffb0bc;
+        font-size: 14px;
+        color: #ffd0d8;
         margin-bottom: 12px;
         line-height: 1.7;
       }
@@ -905,7 +913,7 @@
         }
         .tab {
           padding: 12px 14px;
-          font-size: 8px;
+          font-size: 9px;
         }
         .cap .amt {
           font-size: 36px;
@@ -941,7 +949,7 @@
         }
         .tab {
           padding: 10px 10px;
-          font-size: 7px;
+          font-size: 8px;
         }
         .sbadge {
           font-size: 8px;
@@ -2118,7 +2126,7 @@
                 placeholder="1.0"
                 step="0.01"
                 value="1"
-                oninput="calcCommission()"
+                oninput="calcPnL()"
               />
             </div>
             <div class="fg">
@@ -2128,28 +2136,45 @@
                 id="ten"
                 placeholder="0.00"
                 step="0.01"
-                oninput="calcCommission()"
+                oninput="calcPnL()"
               />
             </div>
             <div class="fg">
               <label>Exit Price</label
-              ><input type="number" id="tex" placeholder="0.00" step="0.01" />
+              ><input
+                type="number"
+                id="tex"
+                placeholder="0.00"
+                step="0.01"
+                oninput="calcPnL()"
+              />
             </div>
           </div>
           <div class="frow">
             <div class="fg">
-              <label>Commission Rate (%)</label
+              <label>Entry Fee Rate (%)</label
               ><input
                 type="number"
-                id="tcommrate"
-                placeholder="0.05"
-                step="0.01"
-                value="0.05"
-                oninput="calcCommission()"
+                id="tentryfee"
+                placeholder="0.023607"
+                step="0.000001"
+                value="0.023607"
+                oninput="calcPnL()"
               />
             </div>
             <div class="fg">
-              <label>Commission (₹)</label>
+              <label>Exit Fee Rate (%)</label
+              ><input
+                type="number"
+                id="texitfee"
+                placeholder="0.059014"
+                step="0.000001"
+                value="0.059014"
+                oninput="calcPnL()"
+              />
+            </div>
+            <div class="fg">
+              <label>Gross P&amp;L</label>
               <div
                 style="
                   background: var(--bg);
@@ -2157,18 +2182,18 @@
                   padding: 8px 12px;
                   border-radius: 2px;
                   font-family: &quot;Space Mono&quot;, monospace;
-                  font-size: 12px;
+                  font-size: 13px;
                   color: var(--accent);
                   min-height: 34px;
                   display: flex;
                   align-items: center;
                 "
               >
-                <span id="tcommdisp">₹0.00</span>
+                <span id="tgross">₹0.00</span>
               </div>
             </div>
             <div class="fg">
-              <label>Cost on Commission (₹)</label>
+              <label>Total Fees</label>
               <div
                 style="
                   background: var(--bg);
@@ -2176,19 +2201,34 @@
                   padding: 8px 12px;
                   border-radius: 2px;
                   font-family: &quot;Space Mono&quot;, monospace;
-                  font-size: 12px;
+                  font-size: 13px;
                   color: var(--warn);
                   min-height: 34px;
                   display: flex;
                   align-items: center;
                 "
               >
-                <span id="tcostcommdisp">₹0.00</span>
+                <span id="tfees">₹0.00</span>
               </div>
             </div>
             <div class="fg">
-              <label>P&amp;L (₹)</label
-              ><input type="number" id="tpnl" placeholder="+500 or -300" />
+              <label>Net P&amp;L</label>
+              <div
+                style="
+                  background: var(--bg);
+                  border: 1px solid var(--border);
+                  padding: 8px 12px;
+                  border-radius: 2px;
+                  font-family: &quot;Space Mono&quot;, monospace;
+                  font-size: 13px;
+                  color: var(--green);
+                  min-height: 34px;
+                  display: flex;
+                  align-items: center;
+                "
+              >
+                <span id="tnet">₹0.00</span>
+              </div>
             </div>
             <div class="fg">
               <label>Outcome</label>
@@ -2228,18 +2268,19 @@
                 <th>Signal</th>
                 <th>Dir</th>
                 <th>Qty</th>
-                <th>Entry</th>
-                <th>Exit</th>
-                <th>Commission</th>
-                <th>P&L</th>
+                <th>Gross</th>
+                <th>Fees</th>
+                <th>Net P&amp;L</th>
+                <th>Fees</th>
+                <th>Net P&amp;L</th>
                 <th>Result</th>
                 <th></th>
               </tr>
             </thead>
-            <tbody id="tbody">
+                <td colspan="12"
               <tr>
                 <td
-                  colspan="11"
+                  colspan="12"
                   style="
                     text-align: center;
                     color: var(--muted);
@@ -2519,80 +2560,73 @@
         });
       }
 
-      let trades = JSON.parse(localStorage.getItem("rl_v3") || "[]");
-      let commissions = [];
+      const trades = JSON.parse(localStorage.getItem("rl_v3") || "[]");
+      const DEFAULT_ENTRY_FEE_RATE = 0.023607;
+      const DEFAULT_EXIT_FEE_RATE = 0.059014;
+      let commissionRows = 0;
 
-      function calcCommission() {
-        const entry = parseFloat(document.getElementById("ten").value) || 0;
-        const qty = parseFloat(document.getElementById("tqty").value) || 1;
-        const rate =
-          parseFloat(document.getElementById("tcommrate").value) || 0.05;
+      function money(value) {
+        return `₹${value.toFixed(2)}`;
+      }
 
-        const commission = (entry * qty * rate) / 100;
-        const costOnComm = commission;
+      function getNumberValue(id) {
+        const value = parseFloat(document.getElementById(id).value);
+        return Number.isFinite(value) ? value : 0;
+      }
 
-        document.getElementById("tcommdisp").textContent =
-          "₹" + commission.toFixed(2);
-        document.getElementById("tcostcommdisp").textContent =
-          "₹" + costOnComm.toFixed(2);
+      function getExtraFees() {
+        return Array.from(document.querySelectorAll(".extra-fee-amount")).reduce(
+          (sum, input) => sum + (parseFloat(input.value) || 0),
+          0,
+        );
+      }
+
+      function calcPnL() {
+        const qty = getNumberValue("tqty");
+        const entry = getNumberValue("ten");
+        const exit = getNumberValue("tex");
+        const entryFeeRate = getNumberValue("tentryfee");
+        const exitFeeRate = getNumberValue("texitfee");
+        const direction = document.getElementById("td").value;
+
+        const gross =
+          qty > 0 && entry > 0 && exit > 0
+            ? ((direction === "LONG" ? exit - entry : entry - exit) * qty)
+            : 0;
+        const entryFee = Number(((entry * qty * entryFeeRate) / 100).toFixed(2));
+        const exitFee = Number(((exit * qty * exitFeeRate) / 100).toFixed(2));
+        const extraFees = getExtraFees();
+        const totalFees = Number((entryFee + exitFee + extraFees).toFixed(2));
+        const net = Number((gross - totalFees).toFixed(2));
+
+        document.getElementById("tgross").textContent = money(gross);
+        document.getElementById("tfees").textContent = money(totalFees);
+        document.getElementById("tnet").textContent = money(net);
+
+        return { gross, entryFee, exitFee, extraFees, totalFees, net };
       }
 
       function addCommission() {
-        const entry = parseFloat(document.getElementById("ten").value);
-        const qty = parseFloat(document.getElementById("tqty").value);
-        const rate = parseFloat(document.getElementById("tcommrate").value);
-
-        if (isNaN(entry) || isNaN(qty) || isNaN(rate)) {
-          alert("Enter Entry Price, Quantity, and Commission Rate first");
-          return;
-        }
-
-        const commission = (entry * qty * rate) / 100;
-        commissions.push({ qty, rate, commission });
-
         const list = document.getElementById("commlist");
-        const item = document.createElement("div");
-        item.style.cssText =
-          "background: var(--surf); padding: 10px 12px; margin-bottom: 6px; border-radius: 2px; font-size: 11px; color: var(--text); border-left: 3px solid var(--accent); display: flex; justify-content: space-between; align-items: center;";
-        item.innerHTML = `
-          <span>Qty: ${qty} | Rate: ${rate}% | Commission: ₹${commission.toFixed(2)}</span>
-          <button onclick="removeCommission(${commissions.length - 1})" style="background:none; border:none; color:var(--red); cursor:pointer; font-size:14px; padding:0; margin-left: 10px;">×</button>
+        const row = document.createElement("div");
+        commissionRows += 1;
+        row.className = "commission-row";
+        row.style.cssText =
+          "background: var(--surf); padding: 10px 12px; margin-bottom: 6px; border-radius: 2px; border-left: 3px solid var(--accent); display: grid; grid-template-columns: 1fr 120px auto; gap: 8px; align-items: center;";
+        row.innerHTML = `
+          <input type="text" class="extra-fee-label" placeholder="Commission ${commissionRows}" value="Commission ${commissionRows}" style="width:100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 8px 10px; font-family: 'Space Mono', monospace; font-size: 12px; border-radius: 2px;" />
+          <input type="number" class="extra-fee-amount" placeholder="0.00" step="0.01" value="0" oninput="calcPnL()" style="width:100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 8px 10px; font-family: 'Space Mono', monospace; font-size: 12px; border-radius: 2px; text-align: right;" />
+          <button type="button" onclick="this.closest('.commission-row').remove(); calcPnL();" style="background:none; border:none; color:var(--red); cursor:pointer; font-size:18px; line-height:1;">×</button>
         `;
-        list.appendChild(item);
-
-        updateTotalCommission();
-      }
-
-      function removeCommission(idx) {
-        commissions.splice(idx, 1);
-        document.getElementById("commlist").innerHTML = "";
-        commissions.forEach((c, i) => {
-          const list = document.getElementById("commlist");
-          const item = document.createElement("div");
-          item.style.cssText =
-            "background: var(--surf); padding: 10px 12px; margin-bottom: 6px; border-radius: 2px; font-size: 11px; color: var(--text); border-left: 3px solid var(--accent); display: flex; justify-content: space-between; align-items: center;";
-          item.innerHTML = `
-            <span>Qty: ${c.qty} | Rate: ${c.rate}% | Commission: ₹${c.commission.toFixed(2)}</span>
-            <button onclick="removeCommission(${i})" style="background:none; border:none; color:var(--red); cursor:pointer; font-size:14px; padding:0; margin-left: 10px;">×</button>
-          `;
-          list.appendChild(item);
-        });
-        updateTotalCommission();
-      }
-
-      function updateTotalCommission() {
-        const total = commissions.reduce((sum, c) => sum + c.commission, 0);
-        document.getElementById("tcommdisp").textContent =
-          "₹" + total.toFixed(2);
-        document.getElementById("tcostcommdisp").textContent =
-          "₹" + total.toFixed(2);
+        list.appendChild(row);
+        calcPnL();
       }
 
       function render() {
         const tb = document.getElementById("tbody");
         if (!trades.length) {
           tb.innerHTML =
-            '<tr><td colspan="11" style="text-align:center;color:var(--muted);padding:38px;font-family:\'Space Mono\',monospace;font-size:10px;">NO TRADES LOGGED YET TODAY</td></tr>';
+            '<tr><td colspan="12" style="text-align:center;color:var(--muted);padding:38px;font-family:\'Space Mono\',monospace;font-size:10px;">NO TRADES LOGGED YET TODAY</td></tr>';
           updateP();
           return;
         }
@@ -2606,8 +2640,9 @@
     <td style="font-family:'Space Mono',monospace;font-size:10px;color:var(--accent);">${t.qty}</td>
     <td style="font-family:'Space Mono',monospace;font-size:11px;">${t.en || "—"}</td>
     <td style="font-family:'Space Mono',monospace;font-size:11px;">${t.ex || "—"}</td>
-    <td style="font-family:'Space Mono',monospace;font-size:10px;color:var(--warn);">₹${t.comm ? t.comm.toFixed(2) : "0.00"}</td>
-    <td class="${t.pnl >= 0 ? "profit" : "loss"}" style="font-size:13px;font-weight:600;">${t.pnl >= 0 ? "+" : ""}₹${t.pnl}</td>
+    <td style="font-family:'Space Mono',monospace;font-size:10px;color:var(--accent);">${money(t.gross || t.pnl || 0)}</td>
+    <td style="font-family:'Space Mono',monospace;font-size:10px;color:var(--warn);">${money(t.fees || t.comm || 0)}</td>
+    <td class="${(t.netPnl ?? t.pnl) >= 0 ? "profit" : "loss"}" style="font-size:13px;font-weight:600;">${(t.netPnl ?? t.pnl) >= 0 ? "+" : ""}${money(t.netPnl ?? t.pnl ?? 0)}</td>
     <td style="font-size:11px;color:${t.out === "Win" ? "var(--green)" : t.out === "Loss" ? "var(--red)" : "var(--muted)"};">${t.out}</td>
     <td><button onclick="del(${i})" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:13px;">×</button></td>
   </tr>`,
@@ -2617,7 +2652,7 @@
       }
 
       function updateP() {
-        const total = trades.reduce((s, t) => s + t.pnl, 0);
+        const total = trades.reduce((s, t) => s + (t.netPnl ?? t.pnl ?? 0), 0);
         const d = document.getElementById("pnlDisp");
         d.textContent = (total >= 0 ? "+" : "") + "₹" + total.toFixed(0);
         d.style.color = total >= 0 ? "var(--green)" : "var(--red)";
@@ -2640,37 +2675,44 @@
       }
 
       function logTrade() {
-        const pnl = parseFloat(document.getElementById("tpnl").value);
-        if (isNaN(pnl)) {
-          alert("Enter P&L amount");
+        const qty = getNumberValue("tqty") || 1;
+        const entry = getNumberValue("ten");
+        const exit = getNumberValue("tex");
+        if (!qty || !entry || !exit) {
+          alert("Enter quantity, entry price, and exit price first");
           return;
         }
-
-        const totalComm = commissions.reduce((sum, c) => sum + c.commission, 0);
+        const calc = calcPnL();
+        const extraFees = getExtraFees();
+        const totalFees = calc.totalFees;
 
         trades.push({
           asset: document.getElementById("ta").value,
           dir: document.getElementById("td").value,
           sig: document.getElementById("tsig").value,
-          qty: parseFloat(document.getElementById("tqty").value) || 1,
-          en: document.getElementById("ten").value,
-          ex: document.getElementById("tex").value,
-          comm: totalComm,
-          pnl,
+          qty,
+          en: entry,
+          ex: exit,
+          gross: calc.gross,
+          fees: totalFees,
+          netPnl: calc.net,
           out: document.getElementById("tout").value,
           notes: document.getElementById("tnotes").value,
           time: new Date().toLocaleTimeString(),
         });
         localStorage.setItem("rl_v3", JSON.stringify(trades));
-        ["tqty", "ten", "tex", "tcommrate", "tpnl", "tnotes"].forEach(
+        ["tqty", "ten", "tex", "tentryfee", "texitfee", "tnotes"].forEach(
           (id) => (document.getElementById(id).value = ""),
         );
         document.getElementById("tqty").value = "1";
-        document.getElementById("tcommrate").value = "0.05";
-        document.getElementById("tcommdisp").textContent = "₹0.00";
-        document.getElementById("tcostcommdisp").textContent = "₹0.00";
+        document.getElementById("tentryfee").value = DEFAULT_ENTRY_FEE_RATE;
+        document.getElementById("texitfee").value = DEFAULT_EXIT_FEE_RATE;
+        document.getElementById("tgross").textContent = "₹0.00";
+        document.getElementById("tfees").textContent = "₹0.00";
+        document.getElementById("tnet").textContent = "₹0.00";
         document.getElementById("commlist").innerHTML = "";
-        commissions = [];
+        commissionRows = 0;
+        calcPnL();
         render();
       }
 
@@ -2682,12 +2724,13 @@
 
       function resetDay() {
         if (confirm("Reset today's log?")) {
-          trades = [];
+          trades.length = 0;
           localStorage.setItem("rl_v3", JSON.stringify(trades));
           render();
         }
       }
 
+      calcPnL();
       render();
     </script>
   </body>
