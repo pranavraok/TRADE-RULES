@@ -1089,11 +1089,15 @@
 
     <main>
       <!-- ═══════════════ RULES ═══════════════ -->
-      <section class="sec active" id="rules">
-        <div class="dbanner">
+            <button type="button" class="btn btnp" onclick="logTrade()">
+              LOG TRADE
+            </button>
+            <button type="button" class="btn btng" onclick="addCommission()">
           <div class="dt">⚠ HIGH RISK WARNING — READ BEFORE EVERY SESSION</div>
           <p>
-            You are trading with <strong>30x leverage</strong>. A
+            <button type="button" class="btn btng" onclick="resetDay()">
+              Reset Day
+            </button>
             <strong>3.3% adverse move liquidates your position</strong>. Target
             ₹3,000/day is 20% of capital — achievable only with extreme
             precision and ScalperPro signal discipline.
@@ -2268,16 +2272,16 @@
                 <th>Signal</th>
                 <th>Dir</th>
                 <th>Qty</th>
+                <th>Entry</th>
+                <th>Exit</th>
                 <th>Gross</th>
-                <th>Fees</th>
-                <th>Net P&amp;L</th>
                 <th>Fees</th>
                 <th>Net P&amp;L</th>
                 <th>Result</th>
                 <th></th>
               </tr>
             </thead>
-                <td colspan="12"
+            <tbody id="tbody">
               <tr>
                 <td
                   colspan="12"
