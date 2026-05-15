@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>TRADER'S RULEBOOK — ₹15,000</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap");
-
       :root {
         --bg: #060e1c;
         --surf: #0b1628;
@@ -22,7 +21,6 @@
         --warn: #ff9500;
         --purple: #a78bfa;
       }
-
       * {
         margin: 0;
         padding: 0;
@@ -31,19 +29,18 @@
       body {
         background: var(--bg);
         color: var(--text);
-        font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-        font-size: 16px;
-        line-height: 1.6;
+        font-family: "Inter", system-ui, sans-serif;
+        font-size: 18px;
+        line-height: 1.65;
         min-height: 100vh;
         overflow-x: hidden;
         background-image:
           radial-gradient(ellipse 90% 40% at 50% -5%, #003388, transparent),
           radial-gradient(ellipse 40% 40% at 95% 60%, #00c2ff09, transparent);
         -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
       }
 
-      /* ── TICKER ── */
+      /* TICKER */
       .ticker {
         background: linear-gradient(90deg, #002255, #001a44, #002255);
         border-bottom: 1px solid var(--border);
@@ -80,14 +77,13 @@
         }
       }
 
-      /* ── HEADER ── */
+      /* HEADER */
       header {
         padding: 34px 44px 0;
         border-bottom: 1px solid var(--border);
         position: relative;
         overflow: hidden;
         background: linear-gradient(180deg, #091526 0%, transparent 100%);
-        max-width: 100%;
       }
       header::before {
         content: "RULES";
@@ -113,9 +109,9 @@
       }
       h1 {
         font-family: "Bebas Neue", sans-serif;
-        font-size: 60px;
-        line-height: 0.88;
-        letter-spacing: 3px;
+        font-size: 44px;
+        line-height: 1.05;
+        letter-spacing: 1px;
         color: #f7fbff;
       }
       h1 span {
@@ -142,6 +138,72 @@
         color: #a9bfdc;
         font-family: "Space Mono", monospace;
         margin-top: 2px;
+      }
+
+      /* MOTIVATION BANNER */
+      .motiv-banner {
+        background: linear-gradient(135deg, #001a33, #003366);
+        border: 1px solid var(--accent);
+        border-left: 4px solid var(--accent);
+        padding: 14px 20px;
+        margin-bottom: 26px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .motiv-banner .mq {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 20px;
+        color: var(--accent);
+        letter-spacing: 1px;
+        flex: 1;
+      }
+      .motiv-banner .msub {
+        font-size: 12px;
+        color: #aac8e8;
+        font-family: "Space Mono", monospace;
+        margin-top: 2px;
+      }
+
+      /* AUDIO BUTTON */
+      .audio-controls {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .audio-btn {
+        padding: 10px 18px;
+        font-family: "Space Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        border: 1px solid var(--accent);
+        background: transparent;
+        color: var(--accent);
+        cursor: pointer;
+        border-radius: 4px;
+        transition: all 0.2s;
+      }
+      .audio-btn:hover {
+        background: var(--accent);
+        color: #000;
+      }
+      .audio-btn.playing {
+        background: var(--accent);
+        color: #000;
+        animation: glow 1.5s infinite;
+      }
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow: 0 0 8px var(--accent);
+        }
+        50% {
+          box-shadow: 0 0 20px var(--accent);
+        }
       }
 
       /* STATUS */
@@ -188,7 +250,7 @@
         }
       }
 
-      /* ── TABS ── */
+      /* TABS */
       .tabs {
         display: flex;
         margin-top: 26px;
@@ -199,10 +261,10 @@
         flex-wrap: wrap;
       }
       .tab {
-        padding: 12px 20px;
+        padding: 14px 22px;
         font-family: "Space Mono", monospace;
-        font-size: 10px;
-        letter-spacing: 0.12em;
+        font-size: 11px;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
         cursor: pointer;
         border: none;
@@ -233,7 +295,52 @@
         display: block;
       }
 
-      /* ── BANNERS ── */
+      /* CURRENCY TOGGLE */
+      .curr-toggle {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 28px;
+        padding: 12px 18px;
+        background: var(--surf);
+        border: 1px solid var(--border);
+        border-radius: 3px;
+        flex-wrap: wrap;
+      }
+      .curr-toggle .cl {
+        font-family: "Space Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.15em;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+      .curr-btn {
+        padding: 8px 20px;
+        font-family: "Space Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        border-radius: 4px;
+        transition: all 0.2s;
+      }
+      .curr-btn.active {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #000;
+        font-weight: 700;
+      }
+      .rate-display {
+        font-family: "Space Mono", monospace;
+        font-size: 11px;
+        color: var(--accent);
+        margin-left: 8px;
+      }
+
+      /* BANNERS */
       .dbanner {
         background: linear-gradient(135deg, #1a0010, #220015);
         border: 1px solid var(--red);
@@ -304,7 +411,7 @@
         background: #33d2ff;
       }
 
-      /* ── STATS ROW ── */
+      /* STATS */
       .srow {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -312,7 +419,6 @@
         background: var(--border);
         margin-bottom: 32px;
         border: 1px solid var(--border);
-        min-width: 0;
       }
       .sbox {
         background: var(--surf);
@@ -328,7 +434,7 @@
       }
       .sbox .sv {
         font-family: "Bebas Neue", sans-serif;
-        font-size: 30px;
+        font-size: 26px;
         line-height: 1;
       }
       .sbox .ss {
@@ -352,12 +458,12 @@
         color: var(--accent);
       }
 
-      /* ── SECTION TITLE ── */
+      /* SECTION TITLES */
       .stitle {
         font-family: "Bebas Neue", sans-serif;
-        font-size: 34px;
-        letter-spacing: 2px;
-        margin-bottom: 2px;
+        font-size: 28px;
+        letter-spacing: 1px;
+        margin-bottom: 6px;
         color: #f7fbff;
       }
       .stitle span {
@@ -371,7 +477,7 @@
         letter-spacing: 0.06em;
       }
 
-      /* ── RULE CARDS ── */
+      /* RULE CARDS */
       .rgrid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -379,7 +485,6 @@
         background: var(--border);
         margin-bottom: 32px;
         border: 1px solid var(--border);
-        min-width: 0;
       }
       .rcard {
         background: var(--surf);
@@ -408,24 +513,24 @@
       }
       .rnum {
         font-family: "Bebas Neue", sans-serif;
-        font-size: 42px;
+        font-size: 36px;
         color: #182d4a;
         line-height: 1;
-        margin-bottom: 2px;
+        margin-bottom: 4px;
       }
       .rcard.chk .rnum {
         color: #002a18;
       }
       .rtitle {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 600;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
         color: #f7fbff;
       }
       .rdesc {
-        font-size: 13px;
+        font-size: 15px;
         color: #b5c7e0;
-        line-height: 1.65;
+        line-height: 1.7;
       }
       .rtag {
         display: inline-block;
@@ -475,13 +580,12 @@
         vertical-align: middle;
       }
 
-      /* ── TIMING CARDS ── */
+      /* TIMING CARDS */
       .timing-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
         gap: 16px;
         margin-bottom: 32px;
-        min-width: 0;
       }
       .tcard {
         border-radius: 4px;
@@ -499,14 +603,14 @@
       }
       .tcard-head .name {
         font-family: "Bebas Neue", sans-serif;
-        font-size: 26px;
-        letter-spacing: 2px;
+        font-size: 22px;
+        letter-spacing: 1px;
       }
       .tcard-head .sub {
-        font-size: 12px;
-        color: rgba(255, 255, 255, 0.72);
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.82);
         font-family: "Space Mono", monospace;
-        margin-top: 2px;
+        margin-top: 4px;
       }
       .btc-head {
         background: linear-gradient(135deg, #0d1a00, #1a3300);
@@ -528,7 +632,6 @@
       }
       .tcard-body {
         background: var(--surf);
-        padding: 0;
       }
       .tslot {
         display: flex;
@@ -540,7 +643,7 @@
       .tslot:last-child {
         border-bottom: none;
       }
-      .tslot .pill {
+      .pill {
         padding: 4px 10px;
         border-radius: 20px;
         font-family: "Space Mono", monospace;
@@ -570,13 +673,13 @@
         color: var(--warn);
         border: 1px solid var(--warn);
       }
-      .tslot .tinfo .ttime {
+      .ttime {
         font-family: "Space Mono", monospace;
         font-size: 13px;
         color: #f7fbff;
         margin-bottom: 3px;
       }
-      .tslot .tinfo .treason {
+      .treason {
         font-size: 12px;
         color: #b5c7e0;
         line-height: 1.5;
@@ -596,7 +699,7 @@
         color: #fff;
       }
 
-      /* ── CHECKLIST ── */
+      /* CHECKLIST */
       .cwrap {
         margin-bottom: 24px;
       }
@@ -656,7 +759,7 @@
         margin-top: 2px;
       }
 
-      /* ── TRADE LOG ── */
+      /* TRADE LOG */
       .tform {
         background: var(--surf);
         border: 1px solid var(--border);
@@ -664,9 +767,17 @@
         margin-bottom: 24px;
         border-radius: 3px;
       }
+      .form-title {
+        font-family: "Space Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.15em;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
       .frow {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         gap: 12px;
         margin-bottom: 12px;
       }
@@ -685,7 +796,7 @@
         background: var(--bg);
         border: 1px solid var(--border);
         color: #f7fbff;
-        padding: 8px 12px;
+        padding: 9px 12px;
         font-family: "Space Mono", monospace;
         font-size: 13px;
         outline: none;
@@ -696,6 +807,34 @@
       .fg select:focus {
         border-color: var(--accent);
       }
+
+      /* PNL DISPLAY BOXES */
+      .pnl-display {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        padding: 9px 12px;
+        border-radius: 2px;
+        font-family: "Space Mono", monospace;
+        font-size: 14px;
+        font-weight: 700;
+        min-height: 38px;
+        display: flex;
+        align-items: center;
+      }
+      .pnl-gross {
+        color: var(--accent);
+      }
+      .pnl-fee {
+        color: var(--warn);
+      }
+      .pnl-net-pos {
+        color: var(--green);
+      }
+      .pnl-net-neg {
+        color: var(--red);
+      }
+
+      /* BUTTONS */
       .btn {
         padding: 10px 22px;
         font-family: "Space Mono", monospace;
@@ -724,38 +863,17 @@
         border-color: var(--text);
         color: var(--text);
       }
-
-      .ltable {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 13px;
-      }
-      .ltable th {
-        font-family: "Space Mono", monospace;
-        font-size: 9px;
-        letter-spacing: 0.14em;
-        color: #a9bfdc;
-        text-transform: uppercase;
-        text-align: left;
-        padding: 9px 11px;
-        border-bottom: 1px solid var(--border);
-      }
-      .ltable td {
-        padding: 10px 11px;
-        border-bottom: 1px solid #0f1e38;
-      }
-      .ltable tr:hover td {
-        background: #0d1a30;
-      }
-      .profit {
-        color: var(--green);
-        font-family: "Space Mono", monospace;
-      }
-      .loss {
+      .btnd {
+        background: transparent;
+        border: 1px solid var(--red);
         color: var(--red);
-        font-family: "Space Mono", monospace;
+      }
+      .btnd:hover {
+        background: var(--red);
+        color: #fff;
       }
 
+      /* PROGRESS */
       .dprog {
         margin-bottom: 24px;
       }
@@ -776,7 +894,7 @@
         color: #f7fbff;
       }
       .pbar {
-        height: 5px;
+        height: 6px;
         background: var(--border);
         border-radius: 3px;
         overflow: hidden;
@@ -795,7 +913,52 @@
       .pfill.r {
         background: var(--red);
       }
+      .prog-labels {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+      }
+      .prog-labels span {
+        font-family: "Space Mono", monospace;
+        font-size: 8px;
+      }
 
+      /* TRADE TABLE */
+      .ltable {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+      }
+      .ltable th {
+        font-family: "Space Mono", monospace;
+        font-size: 8px;
+        letter-spacing: 0.14em;
+        color: #a9bfdc;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 9px 10px;
+        border-bottom: 1px solid var(--border);
+      }
+      .ltable td {
+        padding: 9px 10px;
+        border-bottom: 1px solid #0f1e38;
+        vertical-align: middle;
+      }
+      .ltable tr:hover td {
+        background: #0d1a30;
+      }
+      .profit {
+        color: var(--green);
+        font-family: "Space Mono", monospace;
+        font-weight: 700;
+      }
+      .loss {
+        color: var(--red);
+        font-family: "Space Mono", monospace;
+        font-weight: 700;
+      }
+
+      /* WITHDRAW BOX */
       .wbox {
         background: linear-gradient(135deg, #0d1a00, #122200);
         border: 1px solid var(--green);
@@ -820,7 +983,46 @@
         color: #fff;
       }
 
-      /* ── IRONCLAD ── */
+      /* SUMMARY CARDS */
+      .summary-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+      .summary-card {
+        background: var(--surf);
+        border: 1px solid var(--border);
+        border-radius: 3px;
+        padding: 14px 16px;
+      }
+      .summary-card .sc-label {
+        font-family: "Space Mono", monospace;
+        font-size: 8px;
+        letter-spacing: 0.15em;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+      .summary-card .sc-val {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 26px;
+        line-height: 1;
+      }
+      .summary-card.sc-g .sc-val {
+        color: var(--green);
+      }
+      .summary-card.sc-r .sc-val {
+        color: var(--red);
+      }
+      .summary-card.sc-o .sc-val {
+        color: var(--gold);
+      }
+      .summary-card.sc-c .sc-val {
+        color: var(--accent);
+      }
+
+      /* IRONCLAD */
       .iron {
         border: 1px solid var(--gold);
         padding: 24px;
@@ -857,7 +1059,6 @@
         flex-shrink: 0;
         margin-top: 3px;
       }
-
       .killbox {
         background: linear-gradient(135deg, #1a0008, #220012);
         border: 2px solid var(--red);
@@ -879,13 +1080,82 @@
         line-height: 1.7;
       }
 
-      @media (max-width: 1200px) {
-        main {
-          padding: 28px 36px;
+      /* MOTIVATIONAL QUOTES TICKER */
+      .motiv-tick {
+        background: linear-gradient(135deg, #001a0d, #002a14);
+        border: 1px solid var(--green);
+        border-radius: 3px;
+        padding: 14px 20px;
+        margin-bottom: 26px;
+        overflow: hidden;
+        position: relative;
+      }
+      .motiv-tick-inner {
+        display: flex;
+        gap: 60px;
+        animation: scroll2 20s linear infinite;
+        white-space: nowrap;
+      }
+      .motiv-tick-inner span {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 18px;
+        color: var(--green);
+        letter-spacing: 2px;
+        flex-shrink: 0;
+      }
+      @keyframes scroll2 {
+        from {
+          transform: translateX(0);
         }
-        header {
-          padding: 28px 36px 0;
+        to {
+          transform: translateX(-50%);
         }
+      }
+
+      /* AUDIO PANEL */
+      .audio-panel {
+        background: linear-gradient(135deg, #001833, #002255);
+        border: 1px solid var(--accent);
+        border-radius: 3px;
+        padding: 16px 20px;
+        margin-bottom: 26px;
+      }
+      .audio-panel-title {
+        font-family: "Space Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.15em;
+        color: var(--accent);
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+      .audio-messages {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 8px;
+      }
+      .amsg-btn {
+        padding: 9px 14px;
+        font-family: "Space Mono", monospace;
+        font-size: 9px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        border: 1px solid var(--border);
+        background: var(--surf);
+        color: #b5c7e0;
+        cursor: pointer;
+        border-radius: 2px;
+        transition: all 0.2s;
+        text-align: left;
+      }
+      .amsg-btn:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .amsg-btn.playing {
+        border-color: var(--green);
+        color: var(--green);
+        background: #001a14;
+        animation: glow 1.5s infinite;
       }
 
       @media (max-width: 768px) {
@@ -896,110 +1166,39 @@
         main {
           padding-top: 20px;
         }
-        .hdr-top {
-          flex-direction: column;
-          gap: 16px;
-          max-width: 100%;
-        }
-        .cap {
-          width: 100%;
-          text-align: left;
-        }
         h1 {
-          font-size: 48px;
+          font-size: 44px;
+        }
+        .cap .amt {
+          font-size: 32px;
         }
         .tabs {
           max-width: 100%;
         }
         .tab {
-          padding: 12px 14px;
+          padding: 10px 12px;
           font-size: 9px;
         }
-        .cap .amt {
-          font-size: 36px;
-        }
-        .srow {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .rgrid {
-          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        }
         .timing-grid {
           grid-template-columns: 1fr;
+        }
+        .frow {
+          grid-template-columns: 1fr 1fr;
         }
       }
-
       @media (max-width: 480px) {
-        header,
-        main {
-          padding: 16px 12px 0;
-        }
-        main {
-          padding-top: 16px;
-        }
         h1 {
-          font-size: 36px;
-          line-height: 0.95;
-        }
-        .hdr-top {
-          gap: 12px;
-        }
-        .cap .amt {
-          font-size: 28px;
+          font-size: 34px;
         }
         .tab {
-          padding: 10px 10px;
+          padding: 9px 9px;
           font-size: 8px;
-        }
-        .sbadge {
-          font-size: 8px;
-          padding: 4px 10px;
-        }
-        .srow {
-          grid-template-columns: 1fr;
-          gap: 0;
-        }
-        .sbox {
-          padding: 12px 14px;
-        }
-        .sbox .sv {
-          font-size: 24px;
-        }
-        .rgrid {
-          grid-template-columns: 1fr;
-          gap: 0;
-        }
-        .rcard {
-          padding: 16px;
-        }
-        .rnum {
-          font-size: 32px;
-        }
-        .rtitle {
-          font-size: 12px;
-        }
-        .rdesc {
-          font-size: 11px;
-        }
-        .timing-grid {
-          grid-template-columns: 1fr;
-          gap: 12px;
-        }
-        .tcard {
-          border-radius: 3px;
-        }
-        .ltable {
-          font-size: 10px;
-        }
-        .ltable th {
-          font-size: 7px;
-          padding: 6px 8px;
-        }
-        .ltable td {
-          padding: 8px 6px;
         }
         .frow {
           grid-template-columns: 1fr;
+        }
+        .srow {
+          grid-template-columns: 1fr 1fr;
         }
       }
     </style>
@@ -1008,30 +1207,23 @@
     <!-- TICKER -->
     <div class="ticker">
       <div class="tick-inner">
-        <span class="tw">⚠ 30X LEVERAGE</span>
-        <span>CAPITAL ₹15,000</span>
-        <span class="tg">TARGET ₹3,000/DAY</span>
-        <span class="tw">HARD STOP −₹1,500</span>
-        <span>EXG 542</span>
-        <span class="tg">SCALPERPRO SIGNALS ONLY</span>
-        <span>1 SCRIP AT A TIME</span>
-        <span class="tg">WITHDRAW DAILY PROFITS</span>
+        <span class="tw">⚠ 30X LEVERAGE</span><span>CAPITAL ₹15,000</span>
+        <span class="tg">TARGET ₹3,000/DAY</span
+        ><span class="tw">HARD STOP −₹1,500</span> <span>PI42</span
+        ><span class="tg">SCALPERPRO SIGNALS ONLY</span>
+        <span>1 SCRIP AT A TIME</span
+        ><span class="tg">WITHDRAW DAILY PROFITS</span>
         <span class="tw">MIDNIGHT = TP+SL MANDATORY</span>
-        <span>BTC BEST: 2PM–6PM & 9PM–1AM IST</span>
-        <span>GOLD BEST: 6:30PM–11PM IST</span>
-        <span>SILVER BEST: 7PM–11PM IST</span>
-        <span class="tw">⚠ 30X LEVERAGE</span>
-        <span>CAPITAL ₹15,000</span>
-        <span class="tg">TARGET ₹3,000/DAY</span>
-        <span class="tw">HARD STOP −₹1,500</span>
-        <span>EXG 542</span>
-        <span class="tg">SCALPERPRO SIGNALS ONLY</span>
-        <span>1 SCRIP AT A TIME</span>
-        <span class="tg">WITHDRAW DAILY PROFITS</span>
+        <span>BTC: 2PM–6PM & 9PM–1AM IST</span><span>GOLD: 6:30PM–11PM IST</span
+        ><span>SILVER: 7PM–11PM IST</span> <span class="tw">⚠ 30X LEVERAGE</span
+        ><span>CAPITAL ₹15,000</span> <span class="tg">TARGET ₹3,000/DAY</span
+        ><span class="tw">HARD STOP −₹1,500</span> <span>EXG 542</span
+        ><span class="tg">SCALPERPRO SIGNALS ONLY</span>
+        <span>1 SCRIP AT A TIME</span
+        ><span class="tg">WITHDRAW DAILY PROFITS</span>
         <span class="tw">MIDNIGHT = TP+SL MANDATORY</span>
-        <span>BTC BEST: 2PM–6PM & 9PM–1AM IST</span>
-        <span>GOLD BEST: 6:30PM–11PM IST</span>
-        <span>SILVER BEST: 7PM–11PM IST</span>
+        <span>BTC: 2PM–6PM & 9PM–1AM IST</span><span>GOLD: 6:30PM–11PM IST</span
+        ><span>SILVER: 7PM–11PM IST</span>
       </div>
     </div>
 
@@ -1084,22 +1276,40 @@
         <button class="tab" onclick="show('ironclad', this)">
           🔒 Never Break
         </button>
+        <button class="tab" onclick="show('mindset', this)">🧠 Mindset</button>
       </nav>
     </header>
 
     <main>
-      <!-- ═══════════════ RULES ═══════════════ -->
-            <button type="button" class="btn btnp" onclick="logTrade()">
-              LOG TRADE
-            </button>
-            <button type="button" class="btn btng" onclick="addCommission()">
+      <!-- ═══ RULES ═══ -->
+      <section class="sec active" id="rules">
+        <div class="motiv-tick">
+          <div class="motiv-tick-inner">
+            <span>ONE PERFECT TRADE BEATS TEN AVERAGE ONES</span>
+            <span>OPPORTUNITIES COME EVERY DAY — YOUR CAPITAL MIGHT NOT</span>
+            <span>DISCIPLINE TODAY = PROFITS TOMORROW</span>
+            <span
+              >THE MARKET WILL ALWAYS BE THERE — YOUR ACCOUNT MIGHT NOT</span
+            >
+            <span>PATIENCE IS YOUR GREATEST EDGE</span>
+            <span>ONE BAD TRADE CAN ERASE WEEKS OF PROFIT</span>
+            <span>ONE PERFECT TRADE BEATS TEN AVERAGE ONES</span>
+            <span>OPPORTUNITIES COME EVERY DAY — YOUR CAPITAL MIGHT NOT</span>
+            <span>DISCIPLINE TODAY = PROFITS TOMORROW</span>
+            <span
+              >THE MARKET WILL ALWAYS BE THERE — YOUR ACCOUNT MIGHT NOT</span
+            >
+            <span>PATIENCE IS YOUR GREATEST EDGE</span>
+            <span>ONE BAD TRADE CAN ERASE WEEKS OF PROFIT</span>
+          </div>
+        </div>
+
+        <div class="dbanner">
           <div class="dt">⚠ HIGH RISK WARNING — READ BEFORE EVERY SESSION</div>
           <p>
-            <button type="button" class="btn btng" onclick="resetDay()">
-              Reset Day
-            </button>
-            <strong>3.3% adverse move liquidates your position</strong>. Target
-            ₹3,000/day is 20% of capital — achievable only with extreme
+            You are trading with <strong>30x leverage</strong>. A
+            <strong>3.3% adverse move liquidates your position</strong>. Your
+            ₹3,000/day target is 20% of capital — achievable only with extreme
             precision and ScalperPro signal discipline.
             <strong>One trade without a stop-loss ends your account.</strong>
           </p>
@@ -1109,7 +1319,7 @@
           <span style="font-size: 26px">📡</span>
           <div class="sb-text">
             <div class="sb-tag">
-              Primary Signal Source — Use This Before Every Trade
+              Primary Signal Source — Use Before Every Trade
             </div>
             <div class="sb-desc">
               All entries must be based on ScalperPro BUY/SELL signals with RSI
@@ -1168,7 +1378,6 @@
           </div>
         </div>
 
-        <!-- NEW RULES -->
         <div class="stitle">New <span>Rules Added</span></div>
         <div class="ssub">// 5 new rules — tap any card to mark it done</div>
         <div class="rgrid">
@@ -1179,8 +1388,8 @@
             </div>
             <div class="rdesc">
               The moment you hit ₹3,000 profit — withdraw from Exchange 542 the
-              same day. Leaving profits in the account means you risk them in
-              the next session. Withdrawn = locked. Safe.
+              same day. Leaving profits in the account means you risk them next
+              session. Withdrawn = locked. Safe.
             </div>
             <span class="rtag tc">Capital</span>
           </div>
@@ -1191,8 +1400,8 @@
             </div>
             <div class="rdesc">
               Trade only ONE instrument at a time — BTC, Gold, or Silver. No
-              simultaneous open positions across assets. Full focus on one
-              market = better decisions. Split attention with 30x = disaster.
+              simultaneous open positions. Full focus on one market = better
+              decisions. Split attention with 30x = disaster.
             </div>
             <span class="rtag tr2">Risk</span>
           </div>
@@ -1203,9 +1412,8 @@
             </div>
             <div class="rdesc">
               If trading between 11PM–4AM IST, both Take Profit AND Stop Loss
-              orders must be placed on the exchange before you walk away. BTC
-              runs 24/7 — an unprotected midnight position at 30x can liquidate
-              while you sleep.
+              orders must be placed before you walk away. BTC runs 24/7 — an
+              unprotected midnight position at 30x liquidates while you sleep.
             </div>
             <span class="rtag tx">Exit</span>
           </div>
@@ -1216,8 +1424,8 @@
             </div>
             <div class="rdesc">
               Only enter when ScalperPro shows BUY or SELL — never WAIT. All 3
-              RSI timeframes (5M, 15M, 1H) must agree. No gut trades. No "I
-              think it's going up." Signal = permission. No signal = no entry.
+              RSI timeframes (5M, 15M, 1H) must agree. No gut trades. Signal =
+              permission. No signal = no entry.
             </div>
             <span class="rtag ts">Signal</span>
           </div>
@@ -1227,16 +1435,14 @@
               Use ScalperPro TP1 / SL1 Levels <span class="nbadge">NEW</span>
             </div>
             <div class="rdesc">
-              When ScalperPro provides BUY/SELL levels, use TP1 as your Take
-              Profit and SL1 as your Stop Loss. Do not override with your own
-              guess. If TP1 is hit and SL is trailed to breakeven, then hold for
-              TP2.
+              Use TP1 as Take Profit and SL1 as Stop Loss. Do not override with
+              your own guess. If TP1 is hit and SL trailed to breakeven, then
+              hold for TP2.
             </div>
             <span class="rtag ts">Signal</span>
           </div>
         </div>
 
-        <!-- ENTRY RULES -->
         <div class="stitle">Entry <span>Rules</span></div>
         <div class="ssub">
           // Do not enter if ANY of these conditions are not met
@@ -1298,7 +1504,6 @@
           </div>
         </div>
 
-        <!-- EXIT RULES -->
         <div class="stitle">Exit <span>Rules</span></div>
         <div class="ssub">// How you exit defines your survival</div>
         <div class="rgrid">
@@ -1324,9 +1529,9 @@
             <div class="rnum">09</div>
             <div class="rtitle">Close Before Major News</div>
             <div class="rdesc">
-              Exit all positions before Fed/CPI/FOMC announcements. News spikes
-              at 30x leverage = instant liquidation. Check ScalperPro session
-              info.
+              Exit all positions before Fed/CPI/FOMC. News spikes at 30x =
+              instant liquidation. Check ScalperPro session info before every
+              trade.
             </div>
             <span class="rtag tx">Exit</span>
           </div>
@@ -1359,7 +1564,6 @@
           </div>
         </div>
 
-        <!-- RISK RULES -->
         <div class="stitle">Risk <span>Rules</span></div>
         <div class="ssub">// Capital preservation is priority one</div>
         <div class="rgrid">
@@ -1456,23 +1660,19 @@
         </div>
       </section>
 
-      <!-- ═══════════════ TIMINGS ═══════════════ -->
+      <!-- ═══ TIMINGS ═══ -->
       <section class="sec" id="timings">
         <div class="stitle">Optimal <span>Trading Timings</span></div>
         <div class="ssub">
-          // All times in IST (India Standard Time). These are your
-          highest-probability windows.
+          // All times in IST. These are your highest-probability windows.
         </div>
-
         <div class="timing-note">
           <strong>How to use this:</strong> Open ScalperPro during the BEST
           windows below. These are when volume is highest, spreads are tightest,
           and signals are most reliable. During AVOID windows, even good-looking
-          signals fail more often — skip them or trade with extreme caution.
+          signals fail more often.
         </div>
-
         <div class="timing-grid">
-          <!-- BTC -->
           <div class="tcard">
             <div class="tcard-head btc-head">
               <span class="icon">₿</span>
@@ -1484,74 +1684,67 @@
             <div class="tcard-body">
               <div class="tslot">
                 <div class="pill best">⭐ BEST</div>
-                <div class="tinfo">
+                <div>
                   <div class="ttime">2:00 PM – 6:00 PM IST</div>
                   <div class="treason">
-                    European session opens + US pre-market overlap. Highest
-                    volume, strongest trends. ScalperPro RSI signals are most
-                    reliable here. This is your primary window.
+                    European session + US pre-market overlap. Highest volume,
+                    strongest trends. ScalperPro RSI signals most reliable.
                   </div>
                 </div>
               </div>
               <div class="tslot">
                 <div class="pill best">⭐ BEST</div>
-                <div class="tinfo">
+                <div>
                   <div class="ttime">9:00 PM – 1:00 AM IST</div>
                   <div class="treason">
-                    US market prime time. Biggest moves of the day happen here.
-                    BTC follows US equity sentiment closely. High volatility =
-                    high opportunity. Use TP+SL strictly.
+                    US market prime time. Biggest moves of the day. BTC follows
+                    US equity sentiment closely. High volatility = high
+                    opportunity.
                   </div>
                 </div>
               </div>
               <div class="tslot">
                 <div class="pill good">✓ GOOD</div>
-                <div class="tinfo">
+                <div>
                   <div class="ttime">6:00 PM – 9:00 PM IST</div>
                   <div class="treason">
                     US market open. Good volume but initial spike volatility.
-                    Wait 15 minutes after 6:30PM before entering. Confirm signal
-                    on 15M chart.
+                    Wait 15 min after 6:30PM before entering.
                   </div>
                 </div>
               </div>
               <div class="tslot">
                 <div class="pill good">✓ GOOD</div>
-                <div class="tinfo">
+                <div>
                   <div class="ttime">11:00 AM – 2:00 PM IST</div>
                   <div class="treason">
                     Moderate activity. Asian session winding down, Europe not
-                    yet open. Decent setups possible if ScalperPro shows strong
-                    signal on 1H timeframe.
+                    yet open. Strong 1H signal needed.
                   </div>
                 </div>
               </div>
               <div class="tslot">
                 <div class="pill ok">~ OK</div>
-                <div class="tinfo">
+                <div>
                   <div class="ttime">1:00 AM – 6:00 AM IST</div>
                   <div class="treason">
-                    Late US + early Asia. Lower volume. If trading here, must
-                    have TP+SL set (Midnight rule). Signals are weaker — require
+                    Late US + early Asia. Lower volume. TP+SL mandatory. Require
                     all 3 RSI timeframes aligned.
                   </div>
                 </div>
               </div>
               <div class="tslot">
                 <div class="pill avoid">✗ AVOID</div>
-                <div class="tinfo">
+                <div>
                   <div class="ttime">6:00 AM – 11:00 AM IST</div>
                   <div class="treason">
-                    Asian session low-volume hours. Choppy, range-bound price
-                    action. High false signal rate. ScalperPro signals
-                    unreliable. Rest and prepare for afternoon session.
+                    Asian session low-volume hours. Choppy, range-bound. High
+                    false signal rate. Rest and prepare for afternoon.
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- GOLD -->
           <div class="tcard">
             <div class="tcard-head gold-head">
               <span class="icon">🥇</span>
@@ -1565,63 +1758,56 @@
             <div class="tcard-body">
               <div class="tslot">
                 <div class="pill best">⭐ BEST</div>
-                <div class="tinfo">
+                <div>
                   <div class="ttime">6:30 PM – 11:00 PM IST</div>
                   <div class="treason">
-                    NY Comex gold market opens at 6:30PM IST. Massive volume,
-                    largest price swings of the day. This is the ONLY window to
-                    trade gold seriously. Your primary gold session.
+                    NY Comex opens at 6:30PM IST. Massive volume, largest price
+                    swings. Your primary gold session.
                   </div>
                 </div>
               </div>
               <div class="tslot">
                 <div class="pill best">⭐ BEST</div>
-                <div class="tinfo">
+                <div>
                   <div class="ttime">2:00 PM – 6:00 PM IST</div>
                   <div class="treason">
-                    London + early European session. Second best window for
-                    gold. Good volume and directional moves before NY opens.
-                    Strong ScalperPro signals appear here.
+                    London + European session. Second best window. Good volume
+                    and directional moves before NY opens.
                   </div>
                 </div>
               </div>
               <div class="tslot">
                 <div class="pill good">✓ GOOD</div>
-                <div class="tinfo">
+                <div>
                   <div class="ttime">11:30 AM – 2:00 PM IST</div>
                   <div class="treason">
                     London session opening. Activity picks up. Moderate signals.
-                    Confirm on 1H before entering. Spreads are tighter than
-                    morning.
+                    Confirm on 1H before entering.
                   </div>
                 </div>
               </div>
               <div class="tslot">
                 <div class="pill avoid">✗ AVOID</div>
-                <div class="tinfo">
-                  <div class="ttime">11:00 PM – 11:30 AM IST (next day)</div>
+                <div>
+                  <div class="ttime">11:00 PM – 11:30 AM IST</div>
                   <div class="treason">
                     NY close to London pre-open. Very thin volume. Gold drifts
-                    sideways. High spread, false breakouts. ScalperPro signals
-                    will be unreliable. Do not trade.
+                    sideways. High spread, false breakouts.
                   </div>
                 </div>
               </div>
               <div class="tslot">
                 <div class="pill avoid">✗ AVOID</div>
-                <div class="tinfo">
+                <div>
                   <div class="ttime">Saturday & Sunday — ALL DAY</div>
                   <div class="treason">
-                    Gold market is completely CLOSED on weekends. ScalperPro
-                    shows a weekend notice. Any signals shown are based on
-                    Friday's close — do NOT trade.
+                    Gold market completely CLOSED on weekends. Any signals shown
+                    are based on Friday's close — do NOT trade.
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- SILVER -->
           <div class="tcard">
             <div class="tcard-head silver-head">
               <span class="icon">🥈</span>
@@ -1635,70 +1821,59 @@
             <div class="tcard-body">
               <div class="tslot">
                 <div class="pill best">⭐ BEST</div>
-                <div class="tinfo">
+                <div>
                   <div class="ttime">7:00 PM – 11:00 PM IST</div>
                   <div class="treason">
-                    NY session peak. Silver is most volatile here — more so than
-                    gold. Biggest intraday moves, highest volume. ScalperPro
-                    signals are strongest. Your primary silver window.
+                    NY session peak. Silver most volatile here — more than gold.
+                    Biggest intraday moves. Your primary silver window.
                   </div>
                 </div>
               </div>
               <div class="tslot">
                 <div class="pill best">⭐ BEST</div>
-                <div class="tinfo">
+                <div>
                   <div class="ttime">2:30 PM – 7:00 PM IST</div>
                   <div class="treason">
-                    European + early London session. Good silver volume. Trends
-                    are established here before NY amplifies them. Good entry
-                    window for longer moves.
+                    European + London session. Good silver volume. Trends
+                    established here before NY amplifies them.
                   </div>
                 </div>
               </div>
               <div class="tslot">
                 <div class="pill good">✓ GOOD</div>
-                <div class="tinfo">
+                <div>
                   <div class="ttime">12:00 PM – 2:30 PM IST</div>
                   <div class="treason">
-                    London pre-session. Moderate activity. Silver can move
-                    sharply on any macro news. Confirm with ScalperPro volume
-                    indicator before entering.
+                    London pre-session. Moderate activity. Confirm with
+                    ScalperPro volume indicator before entering.
                   </div>
                 </div>
               </div>
               <div class="tslot">
                 <div class="pill avoid">✗ AVOID</div>
-                <div class="tinfo">
-                  <div class="ttime">11:00 PM – 12:00 PM IST (next day)</div>
+                <div>
+                  <div class="ttime">11:00 PM – 12:00 PM IST</div>
                   <div class="treason">
-                    Extremely thin volume. Silver spreads widen significantly.
-                    Even small positions can move price. False signals,
+                    Extremely thin volume. Spreads widen. False signals,
                     stop-hunts common. Stay away.
                   </div>
                 </div>
               </div>
               <div class="tslot">
                 <div class="pill avoid">✗ AVOID</div>
-                <div class="tinfo">
+                <div>
                   <div class="ttime">Saturday & Sunday — ALL DAY</div>
                   <div class="treason">
-                    Silver market closed on weekends. Same as gold — ScalperPro
-                    signals not live. Do not trade silver on weekends. Trade BTC
-                    if you must.
+                    Silver market closed on weekends. Trade BTC only on weekends
+                    — or rest.
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- NEWS TIMINGS -->
-        <div class="stitle">Key News <span>Timings to Avoid</span></div>
-        <div class="ssub">
-          // These events cause massive spikes. Close positions BEFORE these
-          times.
-        </div>
-
+        <div class="stitle">Key News <span>Times to Avoid</span></div>
+        <div class="ssub">// Close positions BEFORE these events</div>
         <div class="rgrid" style="margin-bottom: 32px">
           <div
             class="rcard"
@@ -1710,8 +1885,7 @@
             <div class="rdesc">
               Released monthly. Hits around
               <strong style="color: #fff">6:00–6:30 PM IST</strong>. Causes 1–3%
-              spikes on BTC and gold in seconds. Exit all positions 30 minutes
-              before release.
+              spikes on BTC and gold in seconds. Exit 30 min before release.
             </div>
           </div>
           <div
@@ -1723,8 +1897,8 @@
             </div>
             <div class="rdesc">
               Quarterly. Results around
-              <strong style="color: #fff">11:30 PM – 12:30 AM IST</strong>. The
-              most market-moving event. BTC can move 5–10% in minutes. No open
+              <strong style="color: #fff">11:30 PM – 12:30 AM IST</strong>. Most
+              market-moving event. BTC can move 5–10% in minutes. No open
               positions.
             </div>
           </div>
@@ -1733,13 +1907,12 @@
             style="cursor: default; border-left: 3px solid var(--warn)"
           >
             <div class="rtitle" style="color: var(--warn)">
-              📊 US Non-Farm Payrolls (NFP)
+              📊 Non-Farm Payrolls (NFP)
             </div>
             <div class="rdesc">
               First Friday of every month at
               <strong style="color: #fff">6:30 PM IST</strong>. Moves gold and
-              silver violently. Avoid gold/silver trading the full hour around
-              NFP release.
+              silver violently. Avoid full hour around NFP release.
             </div>
           </div>
           <div
@@ -1752,33 +1925,28 @@
             <div class="rdesc">
               Every weekday at <strong style="color: #fff">7:00 PM IST</strong>.
               First 15 minutes of US equity open are chaotic. Wait till 7:15 PM
-              IST before entering any trade after this open.
+              IST before entering.
             </div>
           </div>
         </div>
-
         <div class="timing-note">
-          <strong>Summary — Your ideal trading day:</strong><br />
-          Morning (6AM–2PM): Rest, study charts, plan setups. No trading.<br />
-          Afternoon (2PM–6PM):
-          <strong>Trade BTC and Gold (best window)</strong>.<br />
-          Evening (6:30PM–11PM):
-          <strong>Trade Gold, Silver, BTC (peak window for all 3)</strong
-          >.<br />
-          Night (9PM–1AM): <strong>BTC peak — highest moves</strong>. Use TP+SL
-          if trading past midnight.<br />
-          Late night (1AM–6AM): Avoid unless BTC signal is very strong. TP+SL
-          mandatory.
+          <strong>Your ideal trading day (IST):</strong><br />
+          6AM–2PM: Rest, study charts, plan. No trading.<br />
+          2PM–6PM: <strong>Trade BTC and Gold (best window)</strong>.<br />
+          6:30PM–11PM:
+          <strong>Trade Gold, Silver, BTC (peak for all 3)</strong>.<br />
+          9PM–1AM: <strong>BTC peak — highest moves</strong>. TP+SL if past
+          midnight.<br />
+          1AM–6AM: Avoid unless signal is very strong. TP+SL mandatory.
         </div>
       </section>
 
-      <!-- ═══════════════ CHECKLIST ═══════════════ -->
+      <!-- ═══ CHECKLIST ═══ -->
       <section class="sec" id="checklist">
         <div class="stitle">Pre-Trade <span>Checklist</span></div>
         <div class="ssub">
           // Run this before EVERY session. Any fail = DO NOT TRADE.
         </div>
-
         <div class="cwrap">
           <div class="ctitle">🧠 Mental State</div>
           <div class="citem" onclick="toggleC(this)">
@@ -1818,7 +1986,6 @@
             </div>
           </div>
         </div>
-
         <div class="cwrap">
           <div class="ctitle">⏰ Timing Check</div>
           <div class="citem" onclick="toggleC(this)">
@@ -1828,8 +1995,7 @@
                 I am trading within an optimal window (see Timings tab)
               </div>
               <div class="csub">
-                BTC: 2–6PM or 9PM–1AM &nbsp;|&nbsp; Gold: 2–11PM &nbsp;|&nbsp;
-                Silver: 2:30–11PM IST
+                BTC: 2–6PM or 9PM–1AM | Gold: 2–11PM | Silver: 2:30–11PM IST
               </div>
             </div>
           </div>
@@ -1856,7 +2022,6 @@
             </div>
           </div>
         </div>
-
         <div class="cwrap">
           <div class="ctitle">📡 ScalperPro Signal</div>
           <div class="citem" onclick="toggleC(this)">
@@ -1925,7 +2090,6 @@
             </div>
           </div>
         </div>
-
         <div class="cwrap">
           <div class="ctitle">💰 Capital & Risk</div>
           <div class="citem" onclick="toggleC(this)">
@@ -1989,11 +2153,8 @@
             </div>
           </div>
         </div>
-
         <div class="cwrap">
-          <div class="ctitle">
-            🌙 Midnight Trading Check (11PM–4AM IST only)
-          </div>
+          <div class="ctitle">🌙 Midnight Trading (11PM–4AM IST only)</div>
           <div class="citem" onclick="toggleC(this)">
             <div class="cbox"></div>
             <div>
@@ -2022,7 +2183,6 @@
             </div>
           </div>
         </div>
-
         <div style="text-align: center; margin-top: 18px">
           <button class="btn btng" onclick="resetCL()">
             Reset Checklist for New Session
@@ -2030,75 +2190,99 @@
         </div>
       </section>
 
-      <!-- ═══════════════ TRADE LOG ═══════════════ -->
+      <!-- ═══ TRADE LOG ═══ -->
       <section class="sec" id="log">
         <div class="stitle">Trade <span>Log</span></div>
         <div class="ssub">// Every trade documented. No exceptions.</div>
 
+        <!-- CURRENCY TOGGLE -->
+        <div class="curr-toggle">
+          <span class="cl">Currency Mode:</span>
+          <button
+            class="curr-btn active"
+            id="btnINR"
+            onclick="setCurrency('INR')"
+          >
+            ₹ INR
+          </button>
+          <button class="curr-btn" id="btnUSD" onclick="setCurrency('USD')">
+            $ USD
+          </button>
+          <div style="flex: 1"></div>
+          <span class="cl">USD → INR Rate:</span>
+          <input
+            type="number"
+            id="usdRate"
+            value="83.5"
+            step="0.01"
+            style="
+              width: 90px;
+              background: var(--bg);
+              border: 1px solid var(--border);
+              color: var(--text);
+              padding: 6px 10px;
+              font-family: &quot;Space Mono&quot;, monospace;
+              font-size: 12px;
+              border-radius: 2px;
+              outline: none;
+            "
+            oninput="updateRate()"
+          />
+          <span class="rate-display" id="rateDisplay">1 USD = ₹83.50</span>
+        </div>
+
+        <!-- PROGRESS -->
         <div class="dprog">
           <div class="phdr">
-            <span class="plbl">TODAY'S P&L</span>
+            <span class="plbl">TODAY'S NET P&L</span>
             <span class="pval" id="pnlDisp">₹0</span>
           </div>
           <div class="pbar">
             <div class="pfill g" id="pbar" style="width: 0%"></div>
           </div>
-          <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              margin-top: 5px;
-            "
-          >
-            <span
-              style="
-                font-family: &quot;Space Mono&quot;, monospace;
-                font-size: 8px;
-                color: var(--red);
-              "
-              >−₹1,500 STOP</span
-            >
-            <span
-              style="
-                font-family: &quot;Space Mono&quot;, monospace;
-                font-size: 8px;
-                color: var(--muted);
-              "
-              >₹0</span
-            >
-            <span
-              style="
-                font-family: &quot;Space Mono&quot;, monospace;
-                font-size: 8px;
-                color: var(--green);
-              "
-              >₹3,000 TARGET</span
-            >
+          <div class="prog-labels">
+            <span style="color: var(--red)">−₹1,500 STOP</span>
+            <span style="color: var(--muted)">₹0</span>
+            <span style="color: var(--green)">₹3,000 TARGET</span>
+          </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="summary-row">
+          <div class="summary-card sc-g">
+            <div class="sc-label">Total Gross P&L</div>
+            <div class="sc-val" id="sumGross">₹0.00</div>
+          </div>
+          <div class="summary-card sc-r">
+            <div class="sc-label">Total Fees Paid</div>
+            <div class="sc-val" id="sumFees">₹0.00</div>
+          </div>
+          <div class="summary-card sc-o">
+            <div class="sc-label">Net P&L</div>
+            <div class="sc-val" id="sumNet">₹0.00</div>
+          </div>
+          <div class="summary-card sc-c">
+            <div class="sc-label">Trades Today</div>
+            <div class="sc-val" id="sumTrades">0 / 3</div>
+          </div>
+          <div class="summary-card sc-g">
+            <div class="sc-label">Win Rate</div>
+            <div class="sc-val" id="sumWR">0%</div>
           </div>
         </div>
 
         <div class="wbox">
           <div class="wt">💸 Withdrawal Reminder</div>
           <p>
-            Once P&L hits <strong>₹3,000</strong> — withdraw from Exchange 542
-            <strong>today, same session</strong>. Capital resets to ₹15,000
+            Once net P&L hits <strong>₹3,000</strong> — withdraw from Exchange
+            542 <strong>today, same session</strong>. Capital resets to ₹15,000
             tomorrow. Withdrawn profits cannot be revenge-traded away.
           </p>
         </div>
 
+        <!-- TRADE FORM -->
         <div class="tform">
-          <div
-            style="
-              font-family: &quot;Space Mono&quot;, monospace;
-              font-size: 8px;
-              letter-spacing: 0.15em;
-              color: var(--muted);
-              text-transform: uppercase;
-              margin-bottom: 16px;
-            "
-          >
-            + Log New Trade
-          </div>
+          <div class="form-title">+ Log New Trade</div>
           <div class="frow">
             <div class="fg">
               <label>Asset</label>
@@ -2123,118 +2307,6 @@
               </select>
             </div>
             <div class="fg">
-              <label>Quantity</label
-              ><input
-                type="number"
-                id="tqty"
-                placeholder="1.0"
-                step="0.01"
-                value="1"
-                oninput="calcPnL()"
-              />
-            </div>
-            <div class="fg">
-              <label>Entry Price</label
-              ><input
-                type="number"
-                id="ten"
-                placeholder="0.00"
-                step="0.01"
-                oninput="calcPnL()"
-              />
-            </div>
-            <div class="fg">
-              <label>Exit Price</label
-              ><input
-                type="number"
-                id="tex"
-                placeholder="0.00"
-                step="0.01"
-                oninput="calcPnL()"
-              />
-            </div>
-          </div>
-          <div class="frow">
-            <div class="fg">
-              <label>Entry Fee Rate (%)</label
-              ><input
-                type="number"
-                id="tentryfee"
-                placeholder="0.023607"
-                step="0.000001"
-                value="0.023607"
-                oninput="calcPnL()"
-              />
-            </div>
-            <div class="fg">
-              <label>Exit Fee Rate (%)</label
-              ><input
-                type="number"
-                id="texitfee"
-                placeholder="0.059014"
-                step="0.000001"
-                value="0.059014"
-                oninput="calcPnL()"
-              />
-            </div>
-            <div class="fg">
-              <label>Gross P&amp;L</label>
-              <div
-                style="
-                  background: var(--bg);
-                  border: 1px solid var(--border);
-                  padding: 8px 12px;
-                  border-radius: 2px;
-                  font-family: &quot;Space Mono&quot;, monospace;
-                  font-size: 13px;
-                  color: var(--accent);
-                  min-height: 34px;
-                  display: flex;
-                  align-items: center;
-                "
-              >
-                <span id="tgross">₹0.00</span>
-              </div>
-            </div>
-            <div class="fg">
-              <label>Total Fees</label>
-              <div
-                style="
-                  background: var(--bg);
-                  border: 1px solid var(--border);
-                  padding: 8px 12px;
-                  border-radius: 2px;
-                  font-family: &quot;Space Mono&quot;, monospace;
-                  font-size: 13px;
-                  color: var(--warn);
-                  min-height: 34px;
-                  display: flex;
-                  align-items: center;
-                "
-              >
-                <span id="tfees">₹0.00</span>
-              </div>
-            </div>
-            <div class="fg">
-              <label>Net P&amp;L</label>
-              <div
-                style="
-                  background: var(--bg);
-                  border: 1px solid var(--border);
-                  padding: 8px 12px;
-                  border-radius: 2px;
-                  font-family: &quot;Space Mono&quot;, monospace;
-                  font-size: 13px;
-                  color: var(--green);
-                  min-height: 34px;
-                  display: flex;
-                  align-items: center;
-                "
-              >
-                <span id="tnet">₹0.00</span>
-              </div>
-            </div>
-            <div class="fg">
               <label>Outcome</label>
               <select id="tout">
                 <option>Win</option>
@@ -2244,47 +2316,172 @@
             </div>
           </div>
           <div class="frow">
-            <div class="fg" style="grid-column: 1/-1">
-              <label>Notes</label>
+            <div class="fg">
+              <label id="qtyLabel">Qty / Contracts</label>
               <input
-                type="text"
-                id="tnotes"
-                placeholder="e.g. BUY — RSI aligned 5M/15M/1H, volume above avg, traded 3PM IST window, TP1 hit"
+                type="number"
+                id="tqty"
+                placeholder="1.0"
+                step="0.001"
+                value="1"
+                oninput="calcForm()"
+              />
+            </div>
+            <div class="fg">
+              <label id="entryLabel">Entry Price (USD)</label>
+              <input
+                type="number"
+                id="ten"
+                placeholder="0.00"
+                step="0.01"
+                oninput="calcForm()"
+              />
+            </div>
+            <div class="fg">
+              <label id="exitLabel">Exit Price (USD)</label>
+              <input
+                type="number"
+                id="tex"
+                placeholder="0.00"
+                step="0.01"
+                oninput="calcForm()"
               />
             </div>
           </div>
-          <div id="commlist" style="margin-bottom: 12px"></div>
-          <div style="display: flex; gap: 10px; flex-wrap: wrap">
+
+          <!-- FEE INPUT (simple — user enters actual fee amounts) -->
+          <div
+            style="
+              background: var(--bg);
+              border: 1px solid var(--border);
+              border-left: 3px solid var(--warn);
+              padding: 14px 16px;
+              border-radius: 2px;
+              margin-bottom: 12px;
+            "
+          >
+            <div
+              style="
+                font-family: &quot;Space Mono&quot;, monospace;
+                font-size: 9px;
+                letter-spacing: 0.15em;
+                color: var(--warn);
+                text-transform: uppercase;
+                margin-bottom: 10px;
+              "
+            >
+              💰 Fee Entry (enter actual fee amounts charged by exchange)
+            </div>
+            <div class="frow">
+              <div class="fg">
+                <label id="entFeeLabel">Entry Fee (USD)</label>
+                <input
+                  type="number"
+                  id="tEnFee"
+                  placeholder="0.00"
+                  step="0.01"
+                  value="0"
+                  oninput="calcForm()"
+                />
+              </div>
+              <div class="fg">
+                <label id="extFeeLabel">Exit Fee (USD)</label>
+                <input
+                  type="number"
+                  id="tExFee"
+                  placeholder="0.00"
+                  step="0.01"
+                  value="0"
+                  oninput="calcForm()"
+                />
+              </div>
+              <div class="fg">
+                <label>Other Fees / Commission (USD)</label>
+                <input
+                  type="number"
+                  id="tOtherFee"
+                  placeholder="0.00"
+                  step="0.01"
+                  value="0"
+                  oninput="calcForm()"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- CALCULATED OUTPUT -->
+          <div class="frow" style="margin-bottom: 16px">
+            <div class="fg">
+              <label>Gross P&L (<span id="grossCurrLabel">₹</span>)</label>
+              <div class="pnl-display pnl-gross" id="dispGross">—</div>
+            </div>
+            <div class="fg">
+              <label>Total Fees (<span id="feeCurrLabel">₹</span>)</label>
+              <div class="pnl-display pnl-fee" id="dispFees">—</div>
+            </div>
+            <div class="fg">
+              <label>Net P&L (<span id="netCurrLabel">₹</span>)</label>
+              <div class="pnl-display" id="dispNet" style="font-size: 16px">
+                —
+              </div>
+            </div>
+            <div class="fg">
+              <label>Net P&L (₹ INR)</label>
+              <div class="pnl-display" id="dispNetINR" style="font-size: 16px">
+                —
+              </div>
+            </div>
+          </div>
+
+          <div class="frow">
+            <div class="fg" style="grid-column: 1/-1">
+              <label>Notes (ScalperPro signal, reason, session)</label>
+              <input
+                type="text"
+                id="tnotes"
+                placeholder="e.g. BUY — RSI aligned 5M/15M/1H, volume above avg, 3PM IST window, TP1 hit"
+              />
+            </div>
+          </div>
+          <div
+            style="
+              display: flex;
+              gap: 10px;
+              flex-wrap: wrap;
+              align-items: center;
+              margin-top: 4px;
+            "
+          >
             <button class="btn btnp" onclick="logTrade()">LOG TRADE</button>
-            <button class="btn btng" onclick="addCommission()">
-              + ADD COMMISSION
-            </button>
             <button class="btn btng" onclick="resetDay()">Reset Day</button>
           </div>
         </div>
 
+        <!-- TABLE -->
         <div style="overflow-x: auto">
           <table class="ltable">
             <thead>
               <tr>
                 <th>#</th>
                 <th>Asset</th>
-                <th>Signal</th>
+                <th>Sig</th>
                 <th>Dir</th>
                 <th>Qty</th>
                 <th>Entry</th>
                 <th>Exit</th>
-                <th>Gross</th>
-                <th>Fees</th>
-                <th>Net P&amp;L</th>
+                <th>Gross (₹)</th>
+                <th>Fees (₹)</th>
+                <th>Net P&L (₹)</th>
+                <th>USD Net</th>
                 <th>Result</th>
+                <th>Time</th>
                 <th></th>
               </tr>
             </thead>
             <tbody id="tbody">
               <tr>
                 <td
-                  colspan="12"
+                  colspan="14"
                   style="
                     text-align: center;
                     color: var(--muted);
@@ -2301,13 +2498,12 @@
         </div>
       </section>
 
-      <!-- ═══════════════ IRONCLAD ═══════════════ -->
+      <!-- ═══ IRONCLAD ═══ -->
       <section class="sec" id="ironclad">
         <div class="stitle">The <span>Ironclad</span> Laws</div>
         <div class="ssub">
           // These are NEVER broken. Not once. Not for any reason.
         </div>
-
         <div class="iron">
           <div class="iron-t">🔒 Ten Laws You Never Break</div>
           <ul>
@@ -2406,16 +2602,14 @@
             </li>
           </ul>
         </div>
-
         <div class="killbox">
           <div class="killt">☠ KILL SWITCH</div>
           <div class="killd">
             Lose <strong style="color: #fff">₹4,500 in one week</strong> (30% of
-            capital) →<br />
-            <strong style="color: #fff">STOP TRADING for 48 hours.</strong
-            ><br />
-            Review every logged trade. Find what broke. Fix it.<br />Return only
-            after the full review is done.
+            capital) →<br /><strong style="color: #fff"
+              >STOP TRADING for 48 hours.</strong
+            ><br />Review every logged trade. Find what broke. Fix it.<br />Return
+            only after the full review is done.
           </div>
           <div
             style="
@@ -2428,7 +2622,6 @@
             financial.
           </div>
         </div>
-
         <div
           class="iron"
           style="
@@ -2465,9 +2658,9 @@
             <li>
               <span class="n" style="color: var(--accent)">→</span
               ><span
-                >Use <strong style="color: #fff">TP1 and SL1</strong> as your
-                levels. At TP1, close or trail SL to breakeven. Do not hold to
-                TP2 with no SL protection.</span
+                >Use <strong style="color: #fff">TP1 and SL1</strong>. At TP1,
+                close or trail SL to breakeven. Do not hold to TP2 with no SL
+                protection.</span
               >
             </li>
             <li>
@@ -2488,7 +2681,6 @@
             </li>
           </ul>
         </div>
-
         <div
           class="iron"
           style="
@@ -2503,31 +2695,28 @@
             <li>
               <span class="n" style="color: var(--green)">→</span
               ><span
-                ><strong style="color: #fff">BTC:</strong> Primary windows are
-                2–6PM and 9PM–1AM IST. Avoid 6AM–11AM (Asian low volume).</span
+                ><strong style="color: #fff">BTC:</strong> Primary windows 2–6PM
+                and 9PM–1AM IST. Avoid 6AM–11AM (Asian low volume).</span
               >
             </li>
             <li>
               <span class="n" style="color: var(--green)">→</span
               ><span
                 ><strong style="color: #fff">Gold:</strong> Trade only 2PM–11PM
-                IST. NY Comex open at 6:30PM is the peak window. Closed
-                weekends.</span
+                IST. NY Comex open at 6:30PM is peak. Closed weekends.</span
               >
             </li>
             <li>
               <span class="n" style="color: var(--green)">→</span
               ><span
                 ><strong style="color: #fff">Silver:</strong> Trade 2:30PM–11PM
-                IST. NY session 7PM–11PM is the peak. Avoid all other
-                hours.</span
+                IST. NY session 7PM–11PM is peak. Avoid all other hours.</span
               >
             </li>
             <li>
               <span class="n" style="color: var(--green)">→</span
               ><span
-                >If you're trading outside these windows and signal is not
-                exceptionally strong —
+                >Trading outside these windows without a strong signal —
                 <strong style="color: #fff">don't trade.</strong> Wait for the
                 right window.</span
               >
@@ -2535,9 +2724,388 @@
           </ul>
         </div>
       </section>
+
+      <!-- ═══ MINDSET ═══ -->
+      <section class="sec" id="mindset">
+        <div class="stitle">Trader's <span>Mindset</span></div>
+        <div class="ssub">
+          // The psychological edge that separates winners from losers
+        </div>
+
+        <!-- AUDIO PANEL -->
+        <div class="audio-panel">
+          <div class="audio-panel-title">
+            🎙️ Motivational Audio Reminders — Click to Play
+          </div>
+          <div class="audio-messages">
+            <button
+              class="amsg-btn"
+              onclick="
+                speak(
+                  this,
+                  'Overtrading is the fastest way to blow your account. Wait for the perfect setup. Opportunities come and go every single day. Your capital might not.',
+                )
+              "
+            >
+              ⚠️ On Overtrading
+            </button>
+            <button
+              class="amsg-btn"
+              onclick="
+                speak(
+                  this,
+                  'One wrong trade at 30 times leverage can erase weeks of hard work in seconds. Think before you click. Is this a ScalperPro signal? Does it meet all rules?',
+                )
+              "
+            >
+              ⚡ One Wrong Trade
+            </button>
+            <button
+              class="amsg-btn"
+              onclick="
+                speak(
+                  this,
+                  'Opportunities are coming. Right now. Tomorrow. Next week. They never stop coming. But your capital is limited. Protect it. Be patient. The right setup will appear.',
+                )
+              "
+            >
+              🌊 Opportunities Coming
+            </button>
+            <button
+              class="amsg-btn"
+              onclick="
+                speak(
+                  this,
+                  'You already hit your target today. The smartest trade you can make right now is to close the charts, withdraw your profits, and walk away. Tomorrow is a new day.',
+                )
+              "
+            >
+              🎯 Target Hit — Stop
+            </button>
+            <button
+              class="amsg-btn"
+              onclick="
+                speak(
+                  this,
+                  'This is a revenge trade. You are angry. You want to win it back. Stop. The market does not care about your feelings. A revenge trade is a losing trade before it begins. Take a 30 minute break. Return calm.',
+                )
+              "
+            >
+              😤 Revenge Trading Warning
+            </button>
+            <button
+              class="amsg-btn"
+              onclick="
+                speak(
+                  this,
+                  'You have already taken 3 trades today. That is your maximum. Close the charts. Step away. Your discipline right now is worth more than any fourth trade could ever be.',
+                )
+              "
+            >
+              🚫 3 Trade Limit
+            </button>
+            <button
+              class="amsg-btn"
+              onclick="
+                speak(
+                  this,
+                  'The stop loss is your lifeline. At 30 times leverage, a 3 percent move wipes your position. Set the stop. Respect the stop. Never widen the stop. The stop loss is what keeps you in the game tomorrow.',
+                )
+              "
+            >
+              🛡️ Respect Your SL
+            </button>
+            <button
+              class="amsg-btn"
+              onclick="
+                speak(
+                  this,
+                  'You are down today. That is okay. Every professional trader has losing days. The difference is they do not let one bad day become two. Walk away. Protect what is left. Come back tomorrow with a clear head.',
+                )
+              "
+            >
+              💪 After a Loss
+            </button>
+            <button
+              class="amsg-btn"
+              onclick="
+                speak(
+                  this,
+                  'Wait for the ScalperPro signal. Not your gut. Not a hunch. Not because it looks good. Wait for the signal. Discipline is your only real edge at this leverage.',
+                )
+              "
+            >
+              ⏳ Wait for Signal
+            </button>
+            <button
+              class="amsg-btn"
+              onclick="
+                speak(
+                  this,
+                  'Withdraw your profits. Right now. Do not let them sit in your account overnight. Profits in your account are future losses waiting to happen. Lock them. They are yours. Take them.',
+                )
+              "
+            >
+              💸 Withdraw Profits Now
+            </button>
+          </div>
+          <div
+            style="
+              margin-top: 14px;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              flex-wrap: wrap;
+            "
+          >
+            <button class="btn btnd" onclick="stopAudio()">⏹ Stop Audio</button>
+            <span
+              style="
+                font-family: &quot;Space Mono&quot;, monospace;
+                font-size: 9px;
+                color: var(--muted);
+              "
+              >Uses your device's text-to-speech. Works on all browsers.</span
+            >
+          </div>
+        </div>
+
+        <!-- QUOTES -->
+        <div class="stitle">Daily <span>Affirmations</span></div>
+        <div class="ssub">// Read these before every session</div>
+        <div class="rgrid">
+          <div
+            class="rcard"
+            style="cursor: default; border-top: 2px solid var(--green)"
+          >
+            <div class="rtitle" style="color: var(--green); font-size: 16px">
+              "The market will always be there tomorrow."
+            </div>
+            <div class="rdesc">
+              Every opportunity you miss today will be replaced by a better one
+              tomorrow. Capital that survives today trades again tomorrow.
+              Capital that is gone — is gone forever. Patience is not weakness.
+              Patience is power.
+            </div>
+          </div>
+          <div
+            class="rcard"
+            style="cursor: default; border-top: 2px solid var(--accent)"
+          >
+            <div class="rtitle" style="color: var(--accent); font-size: 16px">
+              "One perfect trade beats ten average ones."
+            </div>
+            <div class="rdesc">
+              You do not need to trade constantly to make money. You need to
+              trade correctly. One clean ScalperPro setup with proper entry, SL,
+              and TP is worth more than five rushed trades born from boredom or
+              greed.
+            </div>
+          </div>
+          <div
+            class="rcard"
+            style="cursor: default; border-top: 2px solid var(--gold)"
+          >
+            <div class="rtitle" style="color: var(--gold); font-size: 16px">
+              "Discipline is what you do when nobody is watching."
+            </div>
+            <div class="rdesc">
+              Following the rules when everything is going well is easy.
+              Following the rules when you are down ₹1,000 and the market looks
+              tempting — that is where real traders are made. Your discipline in
+              the hard moments defines your results.
+            </div>
+          </div>
+          <div
+            class="rcard"
+            style="cursor: default; border-top: 2px solid var(--red)"
+          >
+            <div class="rtitle" style="color: var(--red); font-size: 16px">
+              "A loss accepted is a lesson earned."
+            </div>
+            <div class="rdesc">
+              Every stopped-out trade that followed the rules is a successful
+              trade psychologically. You managed risk. You survived. You will
+              trade again. A trader who blows their account trying to avoid a
+              ₹500 loss is the real failure.
+            </div>
+          </div>
+          <div
+            class="rcard"
+            style="cursor: default; border-top: 2px solid var(--purple)"
+          >
+            <div class="rtitle" style="color: var(--purple); font-size: 16px">
+              "Your emotions are your biggest enemy."
+            </div>
+            <div class="rdesc">
+              Fear makes you exit winners early. Greed makes you hold losers too
+              long. Anger makes you revenge trade. Euphoria makes you overtrade.
+              The moment you feel any strong emotion — stop. That feeling costs
+              money at 30x leverage.
+            </div>
+          </div>
+          <div
+            class="rcard"
+            style="cursor: default; border-top: 2px solid var(--warn)"
+          >
+            <div class="rtitle" style="color: var(--warn); font-size: 16px">
+              "Opportunities never stop coming. Your capital might."
+            </div>
+            <div class="rdesc">
+              The BTC chart was printing setups last week, last month, last
+              year. It will print setups next week too. There is no "last
+              chance." There is only the next setup. Protect your capital so you
+              are there to take it.
+            </div>
+          </div>
+        </div>
+
+        <!-- DAILY RITUAL -->
+        <div class="stitle">Daily <span>Pre-Session Ritual</span></div>
+        <div class="ssub">// Do this every day before opening any chart</div>
+        <div
+          style="
+            background: var(--surf);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            padding: 24px;
+          "
+        >
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+              gap: 16px;
+            "
+          >
+            <div
+              style="border-left: 3px solid var(--accent); padding-left: 14px"
+            >
+              <div
+                style="
+                  font-family: &quot;Space Mono&quot;, monospace;
+                  font-size: 10px;
+                  color: var(--accent);
+                  letter-spacing: 0.1em;
+                  text-transform: uppercase;
+                  margin-bottom: 6px;
+                "
+              >
+                Step 1 — 5 mins before
+              </div>
+              <div style="font-size: 13px; color: #d7e8ff; line-height: 1.6">
+                Take 5 deep breaths. Ask yourself: "Am I calm? Did I sleep
+                enough? Am I trading to recover losses?" If any answer is wrong
+                — do not open the charts.
+              </div>
+            </div>
+            <div style="border-left: 3px solid var(--gold); padding-left: 14px">
+              <div
+                style="
+                  font-family: &quot;Space Mono&quot;, monospace;
+                  font-size: 10px;
+                  color: var(--gold);
+                  letter-spacing: 0.1em;
+                  text-transform: uppercase;
+                  margin-bottom: 6px;
+                "
+              >
+                Step 2 — Check timings
+              </div>
+              <div style="font-size: 13px; color: #d7e8ff; line-height: 1.6">
+                Open the Timings tab. Confirm you are in a BEST or GOOD window.
+                Check for CPI/FOMC/NFP events today. If major news is within 2
+                hours — wait.
+              </div>
+            </div>
+            <div
+              style="border-left: 3px solid var(--green); padding-left: 14px"
+            >
+              <div
+                style="
+                  font-family: &quot;Space Mono&quot;, monospace;
+                  font-size: 10px;
+                  color: var(--green);
+                  letter-spacing: 0.1em;
+                  text-transform: uppercase;
+                  margin-bottom: 6px;
+                "
+              >
+                Step 3 — Open ScalperPro
+              </div>
+              <div style="font-size: 13px; color: #d7e8ff; line-height: 1.6">
+                Open ScalperPro. Select your scrip. Check RSI on 5M, 15M, 1H.
+                Wait for BUY or SELL signal with aligned indicators. If WAIT —
+                close the app and come back in 30 mins.
+              </div>
+            </div>
+            <div style="border-left: 3px solid var(--warn); padding-left: 14px">
+              <div
+                style="
+                  font-family: &quot;Space Mono&quot;, monospace;
+                  font-size: 10px;
+                  color: var(--warn);
+                  letter-spacing: 0.1em;
+                  text-transform: uppercase;
+                  margin-bottom: 6px;
+                "
+              >
+                Step 4 — Plan the trade
+              </div>
+              <div style="font-size: 13px; color: #d7e8ff; line-height: 1.6">
+                Before clicking anything, write down: Entry price, TP1 level,
+                SL1 level, position size for max ₹500 risk, and your total fees.
+                If R:R is less than 1:2 — skip it.
+              </div>
+            </div>
+            <div style="border-left: 3px solid var(--red); padding-left: 14px">
+              <div
+                style="
+                  font-family: &quot;Space Mono&quot;, monospace;
+                  font-size: 10px;
+                  color: var(--red);
+                  letter-spacing: 0.1em;
+                  text-transform: uppercase;
+                  margin-bottom: 6px;
+                "
+              >
+                Step 5 — Execute & protect
+              </div>
+              <div style="font-size: 13px; color: #d7e8ff; line-height: 1.6">
+                Enter the trade. IMMEDIATELY place the SL order. Then the TP
+                order. Now step back. Do not stare at the chart. Check every
+                5–10 minutes. Trust the orders you set.
+              </div>
+            </div>
+            <div
+              style="border-left: 3px solid var(--purple); padding-left: 14px"
+            >
+              <div
+                style="
+                  font-family: &quot;Space Mono&quot;, monospace;
+                  font-size: 10px;
+                  color: var(--purple);
+                  letter-spacing: 0.1em;
+                  text-transform: uppercase;
+                  margin-bottom: 6px;
+                "
+              >
+                Step 6 — After the trade
+              </div>
+              <div style="font-size: 13px; color: #d7e8ff; line-height: 1.6">
+                Win or lose — log it in the Trade Log immediately. Take a
+                15-minute break. Review what happened objectively. If you hit
+                ₹3,000 — withdraw and stop. If you hit −₹1,500 — stop and come
+                back tomorrow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script>
+      // ─── ROUTING ───
       function show(id, btn) {
         document
           .querySelectorAll(".sec")
@@ -2545,9 +3113,44 @@
         document
           .querySelectorAll(".tab")
           .forEach((t) => t.classList.remove("active"));
-        document.getElementById(id).classList.add("active");
-        btn.classList.add("active");
+        const sec = document.getElementById(id);
+        if (sec) sec.classList.add("active");
+        if (btn) btn.classList.add("active");
+        try {
+          location.hash = id;
+        } catch (e) {}
       }
+      function initRouting() {
+        const hash = (location.hash || "").replace("#", "");
+        const valid = [
+          "rules",
+          "timings",
+          "checklist",
+          "log",
+          "ironclad",
+          "mindset",
+        ];
+        const target = valid.includes(hash) ? hash : "rules";
+        const btn = document.querySelector(`.tab[onclick*="'${target}'"]`);
+        show(target, btn);
+      }
+      window.addEventListener("hashchange", () => {
+        const hash = (location.hash || "").replace("#", "");
+        const valid = [
+          "rules",
+          "timings",
+          "checklist",
+          "log",
+          "ironclad",
+          "mindset",
+        ];
+        if (valid.includes(hash)) {
+          const btn = document.querySelector(`.tab[onclick*="'${hash}'"]`);
+          show(hash, btn);
+        }
+      });
+
+      // ─── RULE CARDS & CHECKLIST ───
       function toggleR(el) {
         el.classList.toggle("chk");
       }
@@ -2564,178 +3167,324 @@
         });
       }
 
-      const trades = JSON.parse(localStorage.getItem("rl_v3") || "[]");
-      const DEFAULT_ENTRY_FEE_RATE = 0.023607;
-      const DEFAULT_EXIT_FEE_RATE = 0.059014;
-      let commissionRows = 0;
+      // ─── CURRENCY ───
+      let currency = "INR";
+      let usdRate = 83.5;
 
-      function money(value) {
-        return `₹${value.toFixed(2)}`;
+      function setCurrency(c) {
+        currency = c;
+        document
+          .getElementById("btnINR")
+          .classList.toggle("active", c === "INR");
+        document
+          .getElementById("btnUSD")
+          .classList.toggle("active", c === "USD");
+        updateCurrencyLabels();
+        calcForm();
+        render();
+      }
+      function updateRate() {
+        usdRate = parseFloat(document.getElementById("usdRate").value) || 83.5;
+        document.getElementById("rateDisplay").textContent =
+          `1 USD = ₹${usdRate.toFixed(2)}`;
+        calcForm();
+        render();
+      }
+      function updateCurrencyLabels() {
+        const sym = currency === "INR" ? "₹" : "$";
+        document.getElementById("entryLabel").textContent =
+          `Entry Price (${currency === "INR" ? "USD → ₹" : "USD"})`;
+        document.getElementById("exitLabel").textContent =
+          `Exit Price (${currency === "INR" ? "USD → ₹" : "USD"})`;
+        document.getElementById("entFeeLabel").textContent =
+          `Entry Fee (${currency === "INR" ? "USD" : "USD"})`;
+        document.getElementById("extFeeLabel").textContent =
+          `Exit Fee (${currency === "INR" ? "USD" : "USD"})`;
+        document.getElementById("grossCurrLabel").textContent = sym;
+        document.getElementById("feeCurrLabel").textContent = sym;
+        document.getElementById("netCurrLabel").textContent = sym;
       }
 
-      function getNumberValue(id) {
-        const value = parseFloat(document.getElementById(id).value);
-        return Number.isFinite(value) ? value : 0;
+      function toDisplayCurr(usdVal) {
+        return currency === "INR" ? usdVal * usdRate : usdVal;
+      }
+      function fmtCurr(usdVal) {
+        const v = toDisplayCurr(usdVal);
+        const sym = currency === "INR" ? "₹" : "$";
+        return sym + v.toFixed(2);
+      }
+      function fmtINR(usdVal) {
+        return "₹" + (usdVal * usdRate).toFixed(2);
       }
 
-      function getExtraFees() {
-        return Array.from(document.querySelectorAll(".extra-fee-amount")).reduce(
-          (sum, input) => sum + (parseFloat(input.value) || 0),
-          0,
+      // ─── FORM CALC ───
+      function getNum(id) {
+        const v = parseFloat(document.getElementById(id).value);
+        return isFinite(v) ? v : 0;
+      }
+
+      function calcForm() {
+        const qty = getNum("tqty") || 1;
+        const entry = getNum("ten");
+        const exit = getNum("tex");
+        const dir = document.getElementById("td").value;
+        const enFee = getNum("tEnFee");
+        const exFee = getNum("tExFee");
+        const otherFee = getNum("tOtherFee");
+
+        if (!entry || !exit) {
+          ["dispGross", "dispFees", "dispNet", "dispNetINR"].forEach((id) => {
+            document.getElementById(id).textContent = "—";
+            document.getElementById(id).className = "pnl-display";
+          });
+          return null;
+        }
+
+        const grossUSD =
+          dir === "LONG" ? (exit - entry) * qty : (entry - exit) * qty;
+        const totalFeesUSD = enFee + exFee + otherFee;
+        const netUSD = grossUSD - totalFeesUSD;
+
+        const gEl = document.getElementById("dispGross");
+        const fEl = document.getElementById("dispFees");
+        const nEl = document.getElementById("dispNet");
+        const nINR = document.getElementById("dispNetINR");
+
+        gEl.textContent = fmtCurr(grossUSD);
+        gEl.className =
+          "pnl-display " + (grossUSD >= 0 ? "pnl-gross" : "pnl-net-neg");
+        fEl.textContent = fmtCurr(totalFeesUSD);
+        fEl.className = "pnl-display pnl-fee";
+        nEl.textContent = fmtCurr(netUSD);
+        nEl.className =
+          "pnl-display " + (netUSD >= 0 ? "pnl-net-pos" : "pnl-net-neg");
+        nINR.textContent = fmtINR(netUSD);
+        nINR.className =
+          "pnl-display " + (netUSD >= 0 ? "pnl-net-pos" : "pnl-net-neg");
+
+        return { grossUSD, totalFeesUSD, netUSD, qty, entry, exit };
+      }
+
+      // ─── TRADE LOG ───
+      let trades = [];
+      try {
+        trades = JSON.parse(localStorage.getItem("rl_v4") || "[]");
+      } catch (e) {
+        trades = [];
+      }
+
+      function save() {
+        try {
+          localStorage.setItem("rl_v4", JSON.stringify(trades));
+        } catch (e) {}
+      }
+
+      function logTrade() {
+        const qty = getNum("tqty") || 1;
+        const entry = getNum("ten");
+        const exit = getNum("tex");
+        if (!entry || !exit) {
+          alert("Please enter Entry Price and Exit Price");
+          return;
+        }
+
+        const calc = calcForm();
+        if (!calc) return;
+
+        trades.push({
+          asset: document.getElementById("ta").value,
+          dir: document.getElementById("td").value,
+          sig: document.getElementById("tsig").value,
+          out: document.getElementById("tout").value,
+          qty,
+          entry,
+          exit,
+          grossUSD: calc.grossUSD,
+          feesUSD: calc.totalFeesUSD,
+          netUSD: calc.netUSD,
+          netINR: calc.netUSD * usdRate,
+          notes: document.getElementById("tnotes").value,
+          time: new Date().toLocaleTimeString(),
+          rate: usdRate,
+        });
+        save();
+
+        // reset form
+        ["ten", "tex", "tnotes"].forEach(
+          (id) => (document.getElementById(id).value = ""),
         );
+        document.getElementById("tEnFee").value = "0";
+        document.getElementById("tExFee").value = "0";
+        document.getElementById("tOtherFee").value = "0";
+        document.getElementById("tqty").value = "1";
+        ["dispGross", "dispFees", "dispNet", "dispNetINR"].forEach((id) => {
+          document.getElementById(id).textContent = "—";
+          document.getElementById(id).className = "pnl-display";
+        });
+        render();
       }
 
-      function calcPnL() {
-        const qty = getNumberValue("tqty");
-        const entry = getNumberValue("ten");
-        const exit = getNumberValue("tex");
-        const entryFeeRate = getNumberValue("tentryfee");
-        const exitFeeRate = getNumberValue("texitfee");
-        const direction = document.getElementById("td").value;
-
-        const gross =
-          qty > 0 && entry > 0 && exit > 0
-            ? ((direction === "LONG" ? exit - entry : entry - exit) * qty)
-            : 0;
-        const entryFee = Number(((entry * qty * entryFeeRate) / 100).toFixed(2));
-        const exitFee = Number(((exit * qty * exitFeeRate) / 100).toFixed(2));
-        const extraFees = getExtraFees();
-        const totalFees = Number((entryFee + exitFee + extraFees).toFixed(2));
-        const net = Number((gross - totalFees).toFixed(2));
-
-        document.getElementById("tgross").textContent = money(gross);
-        document.getElementById("tfees").textContent = money(totalFees);
-        document.getElementById("tnet").textContent = money(net);
-
-        return { gross, entryFee, exitFee, extraFees, totalFees, net };
+      function del(i) {
+        trades.splice(i, 1);
+        save();
+        render();
       }
 
-      function addCommission() {
-        const list = document.getElementById("commlist");
-        const row = document.createElement("div");
-        commissionRows += 1;
-        row.className = "commission-row";
-        row.style.cssText =
-          "background: var(--surf); padding: 10px 12px; margin-bottom: 6px; border-radius: 2px; border-left: 3px solid var(--accent); display: grid; grid-template-columns: 1fr 120px auto; gap: 8px; align-items: center;";
-        row.innerHTML = `
-          <input type="text" class="extra-fee-label" placeholder="Commission ${commissionRows}" value="Commission ${commissionRows}" style="width:100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 8px 10px; font-family: 'Space Mono', monospace; font-size: 12px; border-radius: 2px;" />
-          <input type="number" class="extra-fee-amount" placeholder="0.00" step="0.01" value="0" oninput="calcPnL()" style="width:100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 8px 10px; font-family: 'Space Mono', monospace; font-size: 12px; border-radius: 2px; text-align: right;" />
-          <button type="button" onclick="this.closest('.commission-row').remove(); calcPnL();" style="background:none; border:none; color:var(--red); cursor:pointer; font-size:18px; line-height:1;">×</button>
-        `;
-        list.appendChild(row);
-        calcPnL();
+      function resetDay() {
+        if (confirm("Reset today's trade log? This cannot be undone.")) {
+          trades = [];
+          save();
+          render();
+        }
       }
 
       function render() {
         const tb = document.getElementById("tbody");
         if (!trades.length) {
           tb.innerHTML =
-            '<tr><td colspan="12" style="text-align:center;color:var(--muted);padding:38px;font-family:\'Space Mono\',monospace;font-size:10px;">NO TRADES LOGGED YET TODAY</td></tr>';
-          updateP();
+            '<tr><td colspan="14" style="text-align:center;color:var(--muted);padding:38px;font-family:\'Space Mono\',monospace;font-size:10px;">NO TRADES LOGGED YET TODAY</td></tr>';
+          updateP(0, 0, 0, 0, 0);
           return;
         }
+
+        let totalGrossINR = 0,
+          totalFeesINR = 0,
+          totalNetINR = 0;
+        let wins = 0;
+
         tb.innerHTML = trades
-          .map(
-            (t, i) => `<tr>
-    <td style="font-family:'Space Mono',monospace;color:var(--muted);font-size:9px;">${i + 1}</td>
-    <td style="font-weight:600;font-size:12px;">${t.asset}</td>
-    <td style="font-family:'Space Mono',monospace;font-size:9px;color:${t.sig === "BUY" ? "var(--green)" : "var(--red)"};">${t.sig}</td>
-    <td style="font-family:'Space Mono',monospace;font-size:9px;color:${t.dir === "LONG" ? "var(--green)" : "var(--red)"};">${t.dir}</td>
-    <td style="font-family:'Space Mono',monospace;font-size:10px;color:var(--accent);">${t.qty}</td>
-    <td style="font-family:'Space Mono',monospace;font-size:11px;">${t.en || "—"}</td>
-    <td style="font-family:'Space Mono',monospace;font-size:11px;">${t.ex || "—"}</td>
-    <td style="font-family:'Space Mono',monospace;font-size:10px;color:var(--accent);">${money(t.gross || t.pnl || 0)}</td>
-    <td style="font-family:'Space Mono',monospace;font-size:10px;color:var(--warn);">${money(t.fees || t.comm || 0)}</td>
-    <td class="${(t.netPnl ?? t.pnl) >= 0 ? "profit" : "loss"}" style="font-size:13px;font-weight:600;">${(t.netPnl ?? t.pnl) >= 0 ? "+" : ""}${money(t.netPnl ?? t.pnl ?? 0)}</td>
-    <td style="font-size:11px;color:${t.out === "Win" ? "var(--green)" : t.out === "Loss" ? "var(--red)" : "var(--muted)"};">${t.out}</td>
-    <td><button onclick="del(${i})" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:13px;">×</button></td>
-  </tr>`,
-          )
+          .map((t, i) => {
+            const r = t.rate || 83.5;
+            const gINR = (t.grossUSD || 0) * r;
+            const fINR = (t.feesUSD || 0) * r;
+            const nINR = t.netINR || t.netUSD * r;
+            totalGrossINR += gINR;
+            totalFeesINR += fINR;
+            totalNetINR += nINR;
+            if (t.out === "Win") wins++;
+            const nc = nINR >= 0 ? "profit" : "loss";
+            return `<tr>
+      <td style="font-family:'Space Mono',monospace;color:var(--muted);font-size:9px;">${i + 1}</td>
+      <td style="font-weight:600;font-size:12px;">${t.asset}</td>
+      <td style="font-family:'Space Mono',monospace;font-size:9px;color:${t.sig === "BUY" ? "var(--green)" : "var(--red)"};">${t.sig}</td>
+      <td style="font-family:'Space Mono',monospace;font-size:9px;color:${t.dir === "LONG" ? "var(--green)" : "var(--red)"};">${t.dir}</td>
+      <td style="font-family:'Space Mono',monospace;font-size:10px;color:var(--accent);">${t.qty}</td>
+      <td style="font-family:'Space Mono',monospace;font-size:10px;">${t.entry}</td>
+      <td style="font-family:'Space Mono',monospace;font-size:10px;">${t.exit}</td>
+      <td style="font-family:'Space Mono',monospace;font-size:10px;color:var(--accent);">₹${gINR.toFixed(2)}</td>
+      <td style="font-family:'Space Mono',monospace;font-size:10px;color:var(--warn);">₹${fINR.toFixed(2)}</td>
+      <td class="${nc}" style="font-size:13px;">${nINR >= 0 ? "+" : ""}₹${nINR.toFixed(2)}</td>
+      <td style="font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);">${(t.netUSD >= 0 ? "+" : "") + "$" + (t.netUSD || 0).toFixed(2)}</td>
+      <td style="font-size:11px;color:${t.out === "Win" ? "var(--green)" : t.out === "Loss" ? "var(--red)" : "var(--muted)"};">${t.out}</td>
+      <td style="font-size:10px;color:var(--muted);">${t.time}</td>
+      <td><button onclick="del(${i})" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:14px;">×</button></td>
+    </tr>`;
+          })
           .join("");
-        updateP();
+
+        updateP(totalNetINR, totalGrossINR, totalFeesINR, wins, trades.length);
       }
 
-      function updateP() {
-        const total = trades.reduce((s, t) => s + (t.netPnl ?? t.pnl ?? 0), 0);
+      function updateP(netINR, grossINR, feesINR, wins, total) {
+        // progress bar
         const d = document.getElementById("pnlDisp");
-        d.textContent = (total >= 0 ? "+" : "") + "₹" + total.toFixed(0);
-        d.style.color = total >= 0 ? "var(--green)" : "var(--red)";
+        d.textContent = (netINR >= 0 ? "+" : "") + "₹" + netINR.toFixed(0);
+        d.style.color = netINR >= 0 ? "var(--green)" : "var(--red)";
         const bar = document.getElementById("pbar");
-        const pct = Math.min((Math.abs(total) / 3000) * 100, 100);
+        const pct = Math.min((Math.abs(netINR) / 3000) * 100, 100);
         bar.style.width = pct + "%";
-        bar.className = "pfill " + (total < 0 ? "r" : total < 1500 ? "w" : "g");
+        bar.className =
+          "pfill " + (netINR < 0 ? "r" : netINR < 1500 ? "w" : "g");
+
+        // summary cards
+        const sg = document.getElementById("sumGross");
+        const sf = document.getElementById("sumFees");
+        const sn = document.getElementById("sumNet");
+        const st = document.getElementById("sumTrades");
+        const sw = document.getElementById("sumWR");
+        sg.textContent = (grossINR >= 0 ? "+" : "") + "₹" + grossINR.toFixed(2);
+        sg.style.color = grossINR >= 0 ? "var(--green)" : "var(--red)";
+        sf.textContent = "₹" + feesINR.toFixed(2);
+        sn.textContent = (netINR >= 0 ? "+" : "") + "₹" + netINR.toFixed(2);
+        sn.style.color = netINR >= 0 ? "var(--green)" : "var(--red)";
+        st.textContent = total + " / 3";
+        st.style.color = total >= 3 ? "var(--red)" : "var(--accent)";
+        sw.textContent =
+          total > 0 ? Math.round((wins / total) * 100) + "%" : "0%";
+
+        // status badge
         const badge = document.getElementById("statusBadge");
-        if (total <= -1500) {
+        if (netINR <= -1500) {
           badge.className = "sbadge off";
-          badge.innerHTML = '<span class="sdot"></span>TRADING STOPPED';
-        } else if (total >= 3000) {
+          badge.innerHTML =
+            '<span class="sdot"></span>TRADING STOPPED — LIMIT HIT';
+        } else if (netINR >= 3000) {
           badge.className = "sbadge done";
           badge.innerHTML =
-            '<span class="sdot"></span>TARGET HIT — WITHDRAW NOW';
+            '<span class="sdot"></span>TARGET HIT — WITHDRAW NOW!';
         } else {
           badge.className = "sbadge on";
           badge.innerHTML = '<span class="sdot"></span>Trading Active';
         }
       }
 
-      function logTrade() {
-        const qty = getNumberValue("tqty") || 1;
-        const entry = getNumberValue("ten");
-        const exit = getNumberValue("tex");
-        if (!qty || !entry || !exit) {
-          alert("Enter quantity, entry price, and exit price first");
-          return;
-        }
-        const calc = calcPnL();
-        const extraFees = getExtraFees();
-        const totalFees = calc.totalFees;
+      // ─── AUDIO / TEXT-TO-SPEECH ───
+      let currentUtterance = null;
 
-        trades.push({
-          asset: document.getElementById("ta").value,
-          dir: document.getElementById("td").value,
-          sig: document.getElementById("tsig").value,
-          qty,
-          en: entry,
-          ex: exit,
-          gross: calc.gross,
-          fees: totalFees,
-          netPnl: calc.net,
-          out: document.getElementById("tout").value,
-          notes: document.getElementById("tnotes").value,
-          time: new Date().toLocaleTimeString(),
-        });
-        localStorage.setItem("rl_v3", JSON.stringify(trades));
-        ["tqty", "ten", "tex", "tentryfee", "texitfee", "tnotes"].forEach(
-          (id) => (document.getElementById(id).value = ""),
-        );
-        document.getElementById("tqty").value = "1";
-        document.getElementById("tentryfee").value = DEFAULT_ENTRY_FEE_RATE;
-        document.getElementById("texitfee").value = DEFAULT_EXIT_FEE_RATE;
-        document.getElementById("tgross").textContent = "₹0.00";
-        document.getElementById("tfees").textContent = "₹0.00";
-        document.getElementById("tnet").textContent = "₹0.00";
-        document.getElementById("commlist").innerHTML = "";
-        commissionRows = 0;
-        calcPnL();
-        render();
-      }
-
-      function del(i) {
-        trades.splice(i, 1);
-        localStorage.setItem("rl_v3", JSON.stringify(trades));
-        render();
-      }
-
-      function resetDay() {
-        if (confirm("Reset today's log?")) {
-          trades.length = 0;
-          localStorage.setItem("rl_v3", JSON.stringify(trades));
-          render();
+      function speak(btn, text) {
+        if ("speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+          document
+            .querySelectorAll(".amsg-btn")
+            .forEach((b) => b.classList.remove("playing"));
+          const utter = new SpeechSynthesisUtterance(text);
+          utter.rate = 0.88;
+          utter.pitch = 1.0;
+          utter.volume = 1.0;
+          // prefer a clear English voice if available
+          const voices = window.speechSynthesis.getVoices();
+          const pref =
+            voices.find((v) => v.lang === "en-IN") ||
+            voices.find((v) => v.lang.startsWith("en-")) ||
+            voices[0];
+          if (pref) utter.voice = pref;
+          utter.onend = () => {
+            btn.classList.remove("playing");
+            currentUtterance = null;
+          };
+          utter.onerror = () => {
+            btn.classList.remove("playing");
+            currentUtterance = null;
+          };
+          currentUtterance = utter;
+          btn.classList.add("playing");
+          window.speechSynthesis.speak(utter);
+        } else {
+          alert(
+            "Your browser does not support text-to-speech. Try Chrome or Edge.",
+          );
         }
       }
 
-      calcPnL();
+      function stopAudio() {
+        if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+        document
+          .querySelectorAll(".amsg-btn")
+          .forEach((b) => b.classList.remove("playing"));
+        currentUtterance = null;
+      }
+
+      // init voices (needed for some browsers)
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.getVoices();
+        window.speechSynthesis.onvoiceschanged = () =>
+          window.speechSynthesis.getVoices();
+      }
+
+      // ─── INIT ───
+      updateCurrencyLabels();
       render();
+      initRouting();
     </script>
   </body>
 </html>
